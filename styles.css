@@ -11,8 +11,8 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: rgb(233, 131, 14);
+    color: rgb(7, 6, 6);
     padding: 10px 0;
 }
 
@@ -33,19 +33,34 @@ nav {
 }
 
 .nav-links a {
-    color: #fff;
+    color: #1a1717;
     text-decoration: none;
     font-size: 18px;
+    font-family: 'Georgia', serif;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    font-weight: bold;
+}
+
+.header-content {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
 }
 
 .search-icon {
     width: 20px;
     height: 20px;
     vertical-align: middle;
+    transition: transform 0.3s ease;
+
+}
+
+
+.search-icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 section {
@@ -56,6 +71,24 @@ section {
     border-radius: 8px;
 }
 
+.search-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
 h1 {
     margin-bottom: 10px;
     color: #333;
@@ -64,3 +97,37 @@ h1 {
 p {
     color: #555;
 }
+
+
+.search-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#searchResults {
+    margin-top: 20px;
+}
+
+#searchResults h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#searchResults p {
+    font-size: 16px;
+}
+
+#searchResults a {
+    display: block;
+    margin-top: 10px; /* Optional: Add some space between the links */
+}
+
+mark {
+    background-color: yellow;
+    font-weight: bold;
+}
+
