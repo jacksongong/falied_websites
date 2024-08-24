@@ -29,12 +29,13 @@ nav {
 }
 
 /* Add top padding to the content so it's not hidden under the fixed header */
-section {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 120px auto 20px auto; /* Adjust this value to ensure enough space for the header */
-    background-color: #fff;
-    border-radius: 8px;
+.section_bottom {
+    height: 60px;
+    width: 100vw;
+    background-color: rgb(233, 131, 14);
+    bottom: 0; /* Positions it at the bottom of the viewport */
+    left: 0; /* Ensures it starts from the left edge */
+    z-index: 1000; /* Ensures it stays on top of other elements */
 }
 
 
@@ -78,13 +79,6 @@ section {
     cursor: pointer;
 }
 
-section {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-}
 
 .search-container {
     max-width: 600px;
@@ -207,7 +201,6 @@ mark {
     align-items: center; /* Center vertically */   
     font-family: "Spectral", Rubik;
     font-size: 2rem;
-    margin-bottom: 150px;
 }
 
 
@@ -217,7 +210,6 @@ mark {
     max-width: 900px;
     font-size: 1.5rem;
     line-height: 2.5; /* Adds vertical space between lines of text */
-    margin-bottom: 150px;
 }
 
 .first_header_font {
@@ -231,13 +223,11 @@ mark {
 
 
 .header_font {
-    margin-top: 50px;
     margin-left: 220px;
     font-family: "Spectral", Rubik;
     max-width: 800px;
     font-size: 2rem;
     line-height: 2.5; /* Adds vertical space between lines of text */
-    margin-top: 50px;
 }
 
 
@@ -247,22 +237,83 @@ mark {
 
 
 /*Below are used for instrgram/remind tags*/
+/* .clip_social_image{
+    
 
-.clip_1{
+} */
 
+/* Container for all clubs */
+
+
+
+.clubs-container {
+    display: flex; /* Aligns all club elements horizontally */
+    justify-content: space-between; /* Adds space between each club */
+    align-items: center; /* Aligns items vertically in the center */
+    padding: 20px; /* Adds padding around the container */
 }
 
+/* Each club box */
+.club {
+    text-align: center; /* Centers the text and images within each club */
+    flex: 1; /* Ensures each club takes up an equal amount of space */
+    margin: 0 10px; /* Adds space between the club elements */
+    margin-bottom: 50px;
+}
 
-.clip_2{
+/* Style for the social media icons */
+.social-icon {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin: 0 20px; /* Adds space between the logos */
     
 }
 
-.clip_3{
+/* Optional: Styling for club headings */
+.club h3 {
+    margin-bottom: 10px;
+    font-size: 1.7rem;
+    font-family: Arial, sans-serif;
+}
+
+.section_bottom {
+    padding: 20px;
+    width: 100vw;
+    background-color: rgb(233, 131, 14);
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-family: "Fjalla On", Libre Baskerville;
+    font-size: 1.5rem;
+
     
 }
 
+.instagram-icon {
+    position: absolute; /* Positions the icon absolutely within the bar */
+    left: 20px; /* Places the icon at the leftmost side of the bar */
+    border: 2px solid black; /* Adds a 2px black border around the icon */
+    border-radius: 20%; /* Optionally, makes the border rounded */
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    transform: translateY(-50%); /* Centers the icon vertically */
+}
 
+.section_bottom p {
+    margin-right: 50px; /* Adjust to control vertical positioning */
+    color: black;
+}
 
-.clip_4{
-    
+/* Style for the emphasized hyperlink */
+.emphasized-link {
+    color: rgb(0, 0, 0); /* Changes the hyperlink color to stand out */
+    font-weight: bold; /* Makes the link bold */
+    text-decoration: underline; /* Adds underline to the link */
+}
+
+.emphasized-link:hover {
+    color: lightyellow; /* Changes the link color on hover */
 }
