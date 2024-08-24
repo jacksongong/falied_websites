@@ -7,13 +7,18 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
 header {
     background-color: rgb(233, 131, 14);
     color: rgb(7, 6, 6);
     padding: 10px 0;
+    position: fixed; /* Fixes the header at the top of the page */
+    width: 100%; /* Ensures the header spans the full width */
+    top: 0; /* Positions the header at the top of the page */
+    left: 0;
+    z-index: 1000; /* Keeps the header on top of other content */
 }
 
 nav {
@@ -22,6 +27,16 @@ nav {
     display: flex;
     justify-content: flex-end;
 }
+
+/* Add top padding to the content so it's not hidden under the fixed header */
+section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 120px auto 20px auto; /* Adjust this value to ensure enough space for the header */
+    background-color: #fff;
+    border-radius: 8px;
+}
+
 
 .nav-links {
     list-style: none;
@@ -44,7 +59,7 @@ nav {
 }
 
 .header-content {
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     padding: 20px;
     text-align: center;
 }
@@ -100,7 +115,7 @@ p {
 
 
 .search-container {
-    max-width: 600px;
+    max-width: 1500px;
     margin: 20px auto;
     padding: 20px;
     background-color: white;
@@ -127,7 +142,127 @@ p {
 }
 
 mark {
-    background-color: yellow;
+    background-color: rgb(255, 166, 0);
     font-weight: bold;
 }
 
+
+.image-container-width {
+    position: relative;
+    width: 100vw;
+
+    
+}
+
+/* The image covers the entire container */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The text is absolutely positioned in the center */
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(216, 130, 2); /* Text color */
+    font-size: 4.5rem; /* Adjust text size */
+    font-weight: bold;
+    text-align: center;
+    font-family: "Abril Fatface", Poppins;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds a dark shadow behind the text */
+    padding: 10px; /* Adds some padding around the text */
+    border-radius: 5px; /* Optionally, add rounded corners */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Creates an outline effect */
+
+}
+
+
+.container p {
+    margin-bottom: 20px; /* Adjust this value for desired spacing */
+}
+
+
+
+
+
+
+
+/*BELOW are FONTS to use for each of the sections
+*/
+.middle_header_font {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */   
+    font-family: "Spectral", Rubik;
+    font-size: 2.25rem;
+    margin-bottom: 25px;
+}
+
+.middle_text_font {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */   
+    font-family: "Spectral", Rubik;
+    font-size: 2rem;
+    margin-bottom: 150px;
+}
+
+
+.body_font {
+    margin-left: 150px;
+    font-family: "Spectral", Rubik;
+    max-width: 900px;
+    font-size: 1.5rem;
+    line-height: 2.5; /* Adds vertical space between lines of text */
+    margin-bottom: 150px;
+}
+
+.first_header_font {
+    margin-left: 220px;
+    font-family: "Spectral", Rubik;
+    max-width: 900px;
+    font-size: 1.5rem;
+    line-height: 2.5; /* Adds vertical space between lines of text */
+    margin-top: 50px;
+}
+
+
+.header_font {
+    margin-top: 50px;
+    margin-left: 220px;
+    font-family: "Spectral", Rubik;
+    max-width: 800px;
+    font-size: 2rem;
+    line-height: 2.5; /* Adds vertical space between lines of text */
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+/*Below are used for instrgram/remind tags*/
+
+.clip_1{
+
+}
+
+
+.clip_2{
+    
+}
+
+.clip_3{
+    
+}
+
+
+
+.clip_4{
+    
+}

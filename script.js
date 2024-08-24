@@ -19,7 +19,7 @@ async function searchSite() {
             if (pageText.includes(query) && query) {
                 // Extract a snippet that includes the search query for context
                 const index = pageText.indexOf(query);
-                const snippet = doc.body.innerText.substring(index - 50, index + 50); // Grabs text around the query
+                const snippet = doc.body.innerText.substring(index - 100, index + 100); // Grabs text around the query
                 
                 // Highlight the matching word in the snippet
                 const highlightedSnippet = snippet.replace(new RegExp(query, 'gi'), match => `<mark>${match}</mark>`);
@@ -44,3 +44,7 @@ async function searchSite() {
         resultsContainer.innerHTML = '<p>No results found</p>';
     }
 }
+
+
+
+
