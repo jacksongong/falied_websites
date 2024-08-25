@@ -2,8 +2,12 @@
 const siteContentMetadata = [
     {
         page: 'about.html',
-        section: 'About Us',
+        section: 'About',
         contentSnippet: 'Our organization is dedicated to promoting educational excellence.'
+        // section: 'About',
+        // contentSnippet: 'Our organization is dedicated to promoting educational excellence.'
+        // section: 'About',
+        // contentSnippet: 'Our organization is dedicated to promoting educational excellence.'
     },
     {
         page: 'math-club.html',

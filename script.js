@@ -47,4 +47,40 @@ async function searchSite() {
 
 
 
+function scrollImage() {
+    var stickyImage = document.querySelector('.fixed-image');
+    var initialPosition = 410; // The initial position (top: 400px)
+    var navbarHeight = document.querySelector('header').offsetHeight;
+    var scrollY = window.scrollY; // Current scroll position
+    var paddingRight = 75; // Add padding to the right
+    var paddingTop = 20; // Add padding below the navbar
+
+    var bottomLimit = document.querySelector('.last_header_font').offsetTop
+
+    // If the user scrolls past the image's top position, fix the image
+    if (scrollY >= initialPosition - navbarHeight) {
+        stickyImage.style.position = 'fixed';
+        stickyImage.style.top = (navbarHeight + paddingTop) + 'px'; // Stick the image below the navbar with padding
+        stickyImage.style.right = paddingRight + 'px'; // Add padding to the right side
+        stickyImage.style.marginRight = '0'; // Remove any margin-right
+    } 
+
+    else if (scrollY >= bottomLimit) {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = bottomLimit + 'px'; // Set the top position to where the image should be in the flow
+        stickyImage.style.right = '0'; // Ensure it stays aligned to the right
+        stickyImage.style.marginRight = '75px'; // Reset the original margin-right
+    }
+    // When scrolling back up, return to the original position but don't go above it
+    else {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = initialPosition + 'px'; // Reset to the initial top position
+        stickyImage.style.right = '0'; // Ensure it stays aligned to the right
+        stickyImage.style.marginRight = '75px'; // Reset the original margin-right
+    }
+}
+
+window.addEventListener('scroll', scrollImage);
+
+
 

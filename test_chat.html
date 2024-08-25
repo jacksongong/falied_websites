@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text with Full-Width Gray Background</title>
+    <style>
+        .strip-gray {
+            background-color: gray; /* Set the background color to gray */
+            width: 100vw; /* Make the background span the full width of the viewport */
+            padding: 20px; /* Add padding around the text for spacing */
+            box-sizing: border-box; /* Ensures padding is included within the width */
+            text-align: center; /* Center the text */
+        }
+
+        .strip-gray p {
+            margin: 0; /* Remove default margins from the paragraph */
+            color: white; /* Set the text color for contrast */
+        }
+    </style>
+</head>
+<body>
+
+<div class="strip-gray">
+    <p>This is some text that has a gray background spanning the entire width of the website.</p>
+</div>
+
+</body>
+</html>
