@@ -84,7 +84,7 @@ nav {
 
 
 .search-container {
-    max-width: 600px;
+    max-width: 500px;
     margin: 20px auto;
     padding: 20px;
     background-color: white;
@@ -112,8 +112,10 @@ p {
 
 
 .search-container {
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 20px auto;
+    margin-top:100px;
+
     padding: 20px;
     background-color: white;
     border-radius: 10px;
@@ -342,16 +344,55 @@ mark {
 /* Side Strip */
 .fixed-image {
     position: absolute;
-    top: 400px; /* Initial position */
     right: 0; /* Aligns the image to the right */
-    margin-right: 75px; /* Adds margin from the right edge */
+    margin-right: 40px; /* Adds margin from the right edge */
+    margin-left: 40px;
+    margin-top:9px;
     width: 700px; /* Adjust size */
     height: auto;
-    z-index: 1000;
-    transition: top 0s ease-in-out; /* Smooth linear transition when becoming sticky */
+    z-index: 1;
+    transition: top 0s linear; /* Smooth linear transition when becoming sticky */
+    margin-top:15px;
 }
 
-/* Additional styles for navigation, layout, etc. */
+.fixed-image img.first-flier {
+    position: relative;
+    left: -25px; /* Move the flier to the left */
+    margin-top: 20px; /* Optional: Add some margin on top */
+    margin-left: -50px; /* Optional: Additional control over left margin */
+    margin-right:20px
+}
+
+.fixed-image img.math-club-flier {
+    position: relative;
+    left: -25px; /* Move the flier to the left */
+    margin-top: 20px; /* Optional: Add some margin on top */
+    margin-right:20px
+}
+
+.fixed-image img.last-flier {
+    position: relative;
+    margin-top: 20px; /* Optional: Add some margin on top */
+    margin-right: -50px; /* Optional: Additional control over left margin */
+    margin-left:-25px;
+}
+
+.fixed-image p{
+    display: flex;
+    font-family: "Brush Script MT", Georgia;
+    font-size: 2.5rem;
+    box-sizing: border-box; /* Ensures padding is included within the width */
+    font-weight: bold; /* Makes the link bold */
+    justify-content: center;
+    padding: 20px; /* Adds space inside the box */
+    background-color: rgb(245, 186, 118);
+    border-radius: 15px; /* Rounds the edges of the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border: 1px solid #ccc; /* Optional: Adds a border to the box */
+    max-width: 650px; /* Optional: Limits the width of the paragraph box */
+    margin-bottom: 20px;
+}
+
 
 
 
@@ -388,4 +429,63 @@ mark {
 
 .emphasized-link:hover {
     color: lightyellow; /* Changes the link color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    
+    /* Flexbox for centering */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+
+    /* Smooth transition */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Smooth transition for fading in and out */
+}
+
+.modal.show {
+    display: flex; /* Show modal when class "show" is added */
+    opacity: 1; /* Fade-in effect */
+}
+
+/* Modal Content (Enlarged Image) */
+.modal-content {
+    max-width: 80%; /* Limit the image size */
+    max-height: 80%; /* Limit the image size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }

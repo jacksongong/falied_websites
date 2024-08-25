@@ -46,37 +46,38 @@ async function searchSite() {
 }
 
 
-
 function scrollImage() {
     var stickyImage = document.querySelector('.fixed-image');
+    var lastHeaderFontSection = document.querySelector('.last_header_font');
     var initialPosition = 410; // The initial position (top: 400px)
     var navbarHeight = document.querySelector('header').offsetHeight;
     var scrollY = window.scrollY; // Current scroll position
-    var paddingRight = 75; // Add padding to the right
+    var paddingRight = 40; // Add padding to the right
     var paddingTop = 20; // Add padding below the navbar
 
-    var bottomLimit = document.querySelector('.last_header_font').offsetTop
+    // Get the top position of the last_header_font section
+    var lastHeaderFontPosition = lastHeaderFontSection.offsetTop;
 
-    // If the user scrolls past the image's top position, fix the image
-    if (scrollY >= initialPosition - navbarHeight) {
+    // If the user scrolls past the image's top position but before the last_header_font section, fix the image
+    if (scrollY >= initialPosition - navbarHeight && scrollY < lastHeaderFontPosition) {
         stickyImage.style.position = 'fixed';
         stickyImage.style.top = (navbarHeight + paddingTop) + 'px'; // Stick the image below the navbar with padding
         stickyImage.style.right = paddingRight + 'px'; // Add padding to the right side
         stickyImage.style.marginRight = '0'; // Remove any margin-right
     } 
-
-    else if (scrollY >= bottomLimit) {
+    // If the user scrolls past the last_header_font section, fix the image at the last_header_font position
+    else if (scrollY >= lastHeaderFontPosition) {
         stickyImage.style.position = 'absolute';
-        stickyImage.style.top = bottomLimit + 'px'; // Set the top position to where the image should be in the flow
+        stickyImage.style.top = lastHeaderFontPosition + 'px'; // Fix the image at the last_header_font position
         stickyImage.style.right = '0'; // Ensure it stays aligned to the right
-        stickyImage.style.marginRight = '75px'; // Reset the original margin-right
+        stickyImage.style.marginRight = '40px'; // Reset the original margin-right
     }
     // When scrolling back up, return to the original position but don't go above it
     else {
         stickyImage.style.position = 'absolute';
         stickyImage.style.top = initialPosition + 'px'; // Reset to the initial top position
         stickyImage.style.right = '0'; // Ensure it stays aligned to the right
-        stickyImage.style.marginRight = '75px'; // Reset the original margin-right
+        stickyImage.style.marginRight = '40px'; // Reset the original margin-right
     }
 }
 
@@ -84,3 +85,73 @@ window.addEventListener('scroll', scrollImage);
 
 
 
+
+
+
+
+window.addEventListener('load', function() {
+    console.log("Page fully loaded.");
+
+    // Clear any lingering overlays or modal issues
+    hideOverlaysAndResetFocus();
+
+    // Log all buttons to ensure they're correctly detected
+    var buttons = document.querySelectorAll('button');
+    console.log("Buttons detected:", buttons);
+
+    // Ensure buttons are enabled and interactive
+    buttons.forEach(function(button) {
+        button.disabled = false; // Make sure no button is disabled
+        button.style.pointerEvents = 'auto'; // Ensure buttons are clickable
+    });
+});
+
+function hideOverlaysAndResetFocus() {
+    // Hide any modals that might still be active
+    var modal = document.getElementById("image-modal");
+    if (modal) {
+        modal.style.display = "none"; // Ensure the modal is hidden on page load
+        console.log("Modal hidden.");
+    }
+
+    // Remove focus from any active element
+    if (document.activeElement) {
+        document.activeElement.blur();
+        console.log("Active element blurred.");
+    }
+}
+
+// Modal functionality remains the same
+var modal = document.getElementById("image-modal");
+var modalImg = document.getElementById("modal-image");
+var closeBtn = document.getElementsByClassName("close")[0];
+
+var images = document.getElementsByClassName("enlargeable-image");
+
+for (var i = 0; i < images.length; i++) {
+    images[i].onclick = function(event) {
+        event.preventDefault(); // Prevent default click behavior
+        modal.style.display = "flex"; // Show the modal
+        modal.classList.add("show"); // Add "show" class to trigger CSS transitions
+        modalImg.src = this.src; // Set the modal image source to the clicked image
+        console.log("Image clicked, modal shown.");
+    }
+}
+
+closeBtn.onclick = function() {
+    modal.classList.remove("show"); // Remove "show" class
+    setTimeout(function() {
+        modal.style.display = "none"; // Hide the modal after the transition
+        console.log("Modal closed.");
+    }, 500);
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.classList.remove("show");
+        setTimeout(function() {
+            modal.style.display = "none";
+            console.log("Modal closed by outside click.");
+        }, 500);
+    }
+}

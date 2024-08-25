@@ -3,27 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text with Full-Width Gray Background</title>
+    <title>Enlarge Image Example</title>
     <style>
-        .strip-gray {
-            background-color: gray; /* Set the background color to gray */
-            width: 100vw; /* Make the background span the full width of the viewport */
-            padding: 20px; /* Add padding around the text for spacing */
-            box-sizing: border-box; /* Ensures padding is included within the width */
-            text-align: center; /* Center the text */
+        /* Modal Background */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
         }
 
-        .strip-gray p {
-            margin: 0; /* Remove default margins from the paragraph */
-            color: white; /* Set the text color for contrast */
+        /* Modal Content (Enlarged Image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%; /* Limit the image size */
+            max-height: 80%; /* Limit the image size */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+            border-radius: 10px;
+        }
+
+        /* Close Button */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-<div class="strip-gray">
-    <p>This is some text that has a gray background spanning the entire width of the website.</p>
+<div class="fixed-image">
+    <img src="images/stem.png" alt="Sticky Image" class="enlargeable-image" width="90%" height="auto">
+    <p>Check Out Our Student-Made Fliers!</p>
+    <a href="#"><img src="images/math-club-flier.png" class="enlargeable-image" width="20%"></a>
+    <!-- Additional images... -->
 </div>
+
+<!-- Modal Structure -->
+<div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image">
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("image-modal");
+
+    // Get the modal image and the close button
+    var modalImg = document.getElementById("modal-image");
+    var closeBtn = document.getElementsByClassName("close")[0];
+
+    // Get all images with the class 'enlargeable-image'
+    var images = document.getElementsByClassName("enlargeable-image");
+
+    for (var i = 0; i < images.length; i++) {
+        images[i].onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src; // Set the modal image source to the clicked image source
+        }
+    }
+
+    // When the close button is clicked, close the modal
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close the modal if the user clicks anywhere outside of the image
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 
 </body>
 </html>
