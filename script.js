@@ -46,10 +46,12 @@ async function searchSite() {
 }
 
 
-function scrollImage() {
+function scrollImage(startingHeaderClass) {
     var stickyImage = document.querySelector('.fixed-image');
+    var startingHeader = document.querySelector(startingHeaderClass); // Get the starting header element dynamically
     var lastHeaderFontSection = document.querySelector('.last_header_font');
-    var initialPosition = 410; // The initial position (top: 400px)
+    
+    var startingHeaderPosition = startingHeader.offsetTop; // Get the top position of the starting header
     var navbarHeight = document.querySelector('header').offsetHeight;
     var scrollY = window.scrollY; // Current scroll position
     var paddingRight = 40; // Add padding to the right
@@ -58,8 +60,8 @@ function scrollImage() {
     // Get the top position of the last_header_font section
     var lastHeaderFontPosition = lastHeaderFontSection.offsetTop;
 
-    // If the user scrolls past the image's top position but before the last_header_font section, fix the image
-    if (scrollY >= initialPosition - navbarHeight && scrollY < lastHeaderFontPosition) {
+    // If the user scrolls past the starting header position but before the last_header_font section, fix the image
+    if (scrollY >= startingHeaderPosition - navbarHeight && scrollY < lastHeaderFontPosition) {
         stickyImage.style.position = 'fixed';
         stickyImage.style.top = (navbarHeight + paddingTop) + 'px'; // Stick the image below the navbar with padding
         stickyImage.style.right = paddingRight + 'px'; // Add padding to the right side
@@ -72,18 +74,39 @@ function scrollImage() {
         stickyImage.style.right = '0'; // Ensure it stays aligned to the right
         stickyImage.style.marginRight = '40px'; // Reset the original margin-right
     }
-    // When scrolling back up, return to the original position but don't go above it
+    // When scrolling back up, return to the starting header position but don't go above it
     else {
         stickyImage.style.position = 'absolute';
-        stickyImage.style.top = initialPosition + 'px'; // Reset to the initial top position
+        stickyImage.style.top = startingHeaderPosition + 'px'; // Reset to the starting header position
         stickyImage.style.right = '0'; // Ensure it stays aligned to the right
         stickyImage.style.marginRight = '40px'; // Reset the original margin-right
     }
 }
 
-window.addEventListener('scroll', scrollImage);
 
 
+
+window.addEventListener('load', function() {
+    const images = document.querySelectorAll('.leadership-profile img');
+    let maxHeight = 0;
+
+    // Step 1: Find the tallest image
+    images.forEach(image => {
+        const height = image.getBoundingClientRect().height;
+        if (height > maxHeight) {
+            maxHeight = height;
+        }
+    });
+
+    // Step 2: Adjust top margin for shorter images to align their bottom with the tallest image
+    images.forEach(image => {
+        const currentHeight = image.getBoundingClientRect().height;
+        if (currentHeight < maxHeight) {
+            const topMargin = maxHeight - currentHeight;
+            image.style.marginTop = `${topMargin}px`;
+        }
+    });
+});
 
 
 
