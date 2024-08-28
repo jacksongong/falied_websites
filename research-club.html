@@ -32,12 +32,23 @@
 
     <!-- Fixed Image on the Right -->
 
-    <div class="fixed-image">
+    <div class="fixed-image-2">
         <p class="link">
             <a href="https://www.quadeducationgroup.com/blog/how-to-do-research-with-a-professor-in-high-school" class="black-link" target="_blank">Steps to Find a Mentor</a>
        
         </p>
         <a href="https://www.quadeducationgroup.com/blog/how-to-do-research-with-a-professor-in-high-school" target="_blank"><img src="images_machine/proffesor.png" alt="Sticky Image" width="60%" height="auto" class="click"></a>
+        
+
+    </div>
+
+
+    <div class="fixed-image">
+        <p class="link">
+            <a href="https://www.analytixlabs.co.in/blog/machine-learning-topics/" class="black-link" target="_blank">Areas of Machine Learning</a>
+       
+        </p>
+        <a href="https://www.analytixlabs.co.in/blog/machine-learning-topics/" target="_blank"><img src="images_machine/overlap-machine.png" alt="Sticky Image" width="60%" height="auto" class="click"></a>
         
 
     </div>
@@ -69,7 +80,8 @@
             In today's world, data is perhaps the most valuable resource. There is a reason why all the world's largest technology and social media platforms take extreme measures to collect your personal data, whether you know it or not.
             Why so? It is because data is fundamental in making future predictions. The more data that is available and usable, the better predictions we can make. For example, a social media app can use your liked videos, time spent per video,
             frequency of usage, and even mutal connections to strategically show you videos of interest. Even though data collection requires much time and effort, once obtained, can be used to make powerful, profitable predictions. It turns out that 
-            Machine Learning and data management go hand in hand. Data that is properly managed can be fed into a 'trained' program which can output an accurate result. These results can be used to make predictions for real-world events that have not yet happend.     
+            Machine Learning and data management go hand in hand. Data that is properly managed can be fed into a 'trained' program which can output an accurate result. These results can be used to make predictions for real-world events that have not yet happend.
+            If you are curious of the different branches of machine learning and its intersection with AI and data science, take a look at the link on the right.     
         
 
     </div>
@@ -82,10 +94,10 @@
     <div class = "body_font", style="margin-bottom: 150px;">
         <p>   
             Due to the vast use cases for machine learning, many fields of STEM research rely on machine learning to make progress. An example of this is in physics and biology research. Both disciplines rely on powerful machine learning algorithms to predict what will happen
-            in new situations. In physics, that could be predicting the behavior of a <a href="https://en.wikipedia.org/wiki/Complex_system" target="_blank" class="remind-link">complex system</a>. In biology, that could be <a href="https://en.wikipedia.org/wiki/Machine_learning_in_bioinformatics#:~:text=Machine%20learning%20can%20aid%20in,classification%2C%20and%20genetic%20network%20induction.&text=This%20technology%20is%20especially%20useful,examining%20which%20genes%20are%20expressed." target="_blank" class="remind-link">pattern recognition and classification</a>. 
-            
+            in new situations. In physics, that could be predicting the behavior of a <a href="https://en.wikipedia.org/wiki/Complex_system" target="_blank" class="remind-link">complex system</a>. In biology, that could be 
+            <a href="https://en.wikipedia.org/wiki/Machine_learning_in_bioinformatics#:~:text=Machine%20learning%20can%20aid%20in,classification%2C%20and%20genetic%20network%20induction.&text=This%20technology%20is%20especially%20useful,examining%20which%20genes%20are%20expressed." target="_blank" class="remind-link">pattern recognition and classification</a>. 
+            In any scenario, most (if not all) theoretical STEM research use some aspect of machine learning to make calculations. At NHS Machine Learning Club, we aim to guide memebers in their understanding of machine learning and its use cases in each step of the research proccess.
         </p>
-        <img src="images_machine/math-club-poster.png" alt="Leader 2", style="margin-left:200px; margin-top:55px; max-width: 30%; height:auto">
 
     </div>
 
@@ -96,10 +108,10 @@
 
     <div class = "body_font", style="margin-bottom: 150px;">
         <p>   
-            NHS Math Club aims to bring excitement to mathematics all while helping students through tutoring. During after school meetings, we play mathematical games, explore interesting 
-            concepts, and train for competitions, including the AMC, Caribou, and Purple Comet competitions. We strive to provide a safe-place for similar-minded students to share their interest in mathematics beyond the classroom.
-            Our club strives to change members' perspective of math from a boring, reptitive chore to a subject they can enjoy and cherish. Math club hopes to foster problem-solving and critical thinking skills in addition to the math cirriculum taught in school.
-            If you are interested, you can sign up using <a href="https://www.remind.com/classes/nvmath21/messages/stream/2ead0bfb-235d-4812-9980-345eeaa8df35" target="_blank" class="remind-link">remind</a> to join the emailing list.
+            Our club aims to simplify the often-overcomplicated field of machine learning by making the learning experiance as fun and interactive as possible. We play with pre-made models and experiment with outputs when given different inputs, exploring the factors that effect the performance of a predicitive model. 
+            We will also teach members how to initiate and set-up their own coding projects so that we as a club can build our own machine learning models from scratch. Machine Learning Club strives to bring excitement to the various applications of machine learning through its applications in scientific research. Our club hopes to 
+            assist members in finding their own research opportunities and find ways of applying machine learning to both their individual research as well as personal projects. 
+
         </p>
 
         <p style="margin-left: 320px; max-width: 30%; height: auto; font-size: 2.2rem; font-weight: bold; text-decoration: underline; margin-top:55px;">Official Club Flyer</p>
@@ -202,17 +214,24 @@
     
 
     
-
-
-
-
-
     <script src="script.js"></script>
     <script>
         window.addEventListener('scroll', function() {
-        scrollImage('.selected_header_font');
+        scrollImage('.first_header_font', '.selected_header_font', 750);
     });
     </script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+        scrollImage1('.selected_header_font', '.last_header_font', 0);
+    });
+    </script>
+
+
+    
+
+
+    
 
 
 

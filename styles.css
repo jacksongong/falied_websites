@@ -454,7 +454,20 @@ mark {
 
 
 
-
+.no_move{
+    position: absolute;
+    right: 0;
+    margin-left: auto; /* Centers the content when the viewport is smaller than 700px */
+    margin-top: 20px; /* Centers the content when the viewport is smaller than 700px */
+    margin-right: 40px; /* Adds margin from the right edge */
+    max-width: 700px; /* Maximum width of the container */
+    width: 100%; /* Allow the container to shrink to the viewport size */
+    height: auto;
+    z-index: 1;
+    transition: top 0s linear; /* Smooth linear transition when becoming sticky */
+    justify-content: center;
+    align-items: center; 
+}
 
 
 .fixed-image {
@@ -540,6 +553,102 @@ mark {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow to make it stand out */}
 
 .fixed-image img.click {
+    width: 75%; /* Ensure the image fits within the container */
+    height: auto; /* Keep the aspect ratio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    margin-left: 70px;
+    border: 15px solid #f4a261; /* Add a border with the desired color */
+    border-radius: 15px; /* Rounds the edges of the box */
+    padding: 10px; /* Add padding between the image and the border */
+    background-color: #264653; /* Fill color for the background around the image */
+    box-sizing: border-box;
+}
+
+
+
+.fixed-image-2 {
+    position: absolute;
+    right: 0;
+    margin-left: auto; /* Centers the content when the viewport is smaller than 700px */
+    margin-top: 20px; /* Centers the content when the viewport is smaller than 700px */
+    margin-right: 40px; /* Adds margin from the right edge */
+    max-width: 700px; /* Maximum width of the container */
+    width: 100%; /* Allow the container to shrink to the viewport size */
+    height: auto;
+    z-index: 1;
+    transition: top 0s linear; /* Smooth linear transition when becoming sticky */
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Side Strip */
+
+.fixed-image-2 img.first-flier {
+    position: relative;
+    left: -25px; /* Move the flier to the left */
+    margin-top: 20px; /* Optional: Add some margin on top */
+    margin-left: -50px; /* Optional: Additional control over left margin */
+    margin-right:20px
+}
+
+.fixed-image-2 img.first-flier:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Adds a shadow on hover */
+}
+
+.fixed-image-2 img.math-club-flier {
+    position: relative;
+    left: -25px; /* Move the flier to the left */
+    margin-top: 20px; /* Optional: Add some margin on top */
+    margin-right:20px
+}
+
+.fixed-image-2 img.math-club-flier:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Adds a shadow on hover */
+}
+
+.fixed-image-2 img.last-flier {
+    position: relative;
+    margin-top: 20px; /* Optional: Add some margin on top */
+    margin-right: -50px; /* Optional: Additional control over left margin */
+    margin-left:-25px;
+}
+
+.fixed-image-2 img.last-flier:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Adds a shadow on hover */
+}
+
+.fixed-image-2 p{
+    display: flex;
+    font-family: "Sofia", sans-serif;
+    font-size: 2.2rem;
+    box-sizing: border-box; /* Ensures padding is included within the width */
+    font-weight: bold; /* Makes the link bold */
+    justify-content: center;
+    padding: 20px; /* Adds space inside the box */
+    background-color: rgb(245, 186, 118);
+    border-radius: 15px; /* Rounds the edges of the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border: 1px solid #ccc; /* Optional: Adds a border to the box */
+    max-width: 650px; /* Optional: Limits the width of the paragraph box */
+    margin-bottom: 20px;
+    color:black;
+}
+
+.fixed-image-2 p.link:hover{
+    font-size: 2.3rem; /* Increase font size on hover */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+
+}
+
+
+
+
+.fixed-image-2 img.click:hover{
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow to make it stand out */}
+
+.fixed-image-2 img.click {
     width: 75%; /* Ensure the image fits within the container */
     height: auto; /* Keep the aspect ratio */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */

@@ -46,42 +46,64 @@ async function searchSite() {
 }
 
 
-function scrollImage(startingHeaderClass) {
+function scrollImage(startSelector, endSelector, offset = 0) {
     var stickyImage = document.querySelector('.fixed-image');
-    var startingHeader = document.querySelector(startingHeaderClass); // Get the starting header element dynamically
-    var lastHeaderFontSection = document.querySelector('.last_header_font');
-    
-    var startingHeaderPosition = startingHeader.offsetTop; // Get the top position of the starting header
+    var startElement = document.querySelector(startSelector);
+    var endElement = document.querySelector(endSelector);
+
+    // Get the top position of the start and end elements
+    var startPosition = startElement.offsetTop; // Adjust the start position by the offset
+    var endPosition = endElement.offsetTop - offset;
+
     var navbarHeight = document.querySelector('header').offsetHeight;
     var scrollY = window.scrollY; // Current scroll position
-    var paddingRight = 40; // Add padding to the right
-    var paddingTop = 20; // Add padding below the navbar
 
-    // Get the top position of the last_header_font section
-    var lastHeaderFontPosition = lastHeaderFontSection.offsetTop;
-
-    // If the user scrolls past the starting header position but before the last_header_font section, fix the image
-    if (scrollY >= startingHeaderPosition - navbarHeight && scrollY < lastHeaderFontPosition) {
+    // If the user scrolls past the start position but before the end position, fix the image
+    if (scrollY >= startPosition - navbarHeight && scrollY < endPosition) {
         stickyImage.style.position = 'fixed';
-        stickyImage.style.top = (navbarHeight + paddingTop) + 'px'; // Stick the image below the navbar with padding
-        stickyImage.style.right = paddingRight + 'px'; // Add padding to the right side
-        stickyImage.style.marginRight = '0'; // Remove any margin-right
+        stickyImage.style.top = navbarHeight + 'px'; // Stick the image below the navbar
     } 
-    // If the user scrolls past the last_header_font section, fix the image at the last_header_font position
-    else if (scrollY >= lastHeaderFontPosition) {
+    // If the user scrolls past the end position, fix the image at the end position
+    else if (scrollY >= endPosition) {
         stickyImage.style.position = 'absolute';
-        stickyImage.style.top = lastHeaderFontPosition + 'px'; // Fix the image at the last_header_font position
-        stickyImage.style.right = '0'; // Ensure it stays aligned to the right
-        stickyImage.style.marginRight = '40px'; // Reset the original margin-right
+        stickyImage.style.top = endPosition + 'px'; // Fix the image at the end position
     }
-    // When scrolling back up, return to the starting header position but don't go above it
+    // When scrolling back up, return to the start position but don't go above it
     else {
         stickyImage.style.position = 'absolute';
-        stickyImage.style.top = startingHeaderPosition + 'px'; // Reset to the starting header position
-        stickyImage.style.right = '0'; // Ensure it stays aligned to the right
-        stickyImage.style.marginRight = '40px'; // Reset the original margin-right
+        stickyImage.style.top = startPosition + 'px'; // Reset to the start position
     }
 }
+
+function scrollImage1(startSelector, endSelector, offset = 0) {
+    var stickyImage = document.querySelector('.fixed-image-2');
+    var startElement = document.querySelector(startSelector);
+    var endElement = document.querySelector(endSelector);
+
+    // Get the top position of the start and end elements
+    var startPosition = startElement.offsetTop + offset; // Adjust the start position by the offset
+    var endPosition = endElement.offsetTop;
+
+    var navbarHeight = document.querySelector('header').offsetHeight;
+    var scrollY = window.scrollY; // Current scroll position
+
+    // If the user scrolls past the start position but before the end position, fix the image
+    if (scrollY >= startPosition - navbarHeight && scrollY < endPosition) {
+        stickyImage.style.position = 'fixed';
+        stickyImage.style.top = navbarHeight + 'px'; // Stick the image below the navbar
+    } 
+    // If the user scrolls past the end position, fix the image at the end position
+    else if (scrollY >= endPosition) {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = endPosition + 'px'; // Fix the image at the end position
+    }
+    // When scrolling back up, return to the start position but don't go above it
+    else {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = startPosition + 'px'; // Reset to the start position
+    }
+}
+
 
 
 
