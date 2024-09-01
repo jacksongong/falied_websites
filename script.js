@@ -45,6 +45,103 @@ async function searchSite() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Ensure the image is correctly positioned at load
+    positionImage('.fixed-image-blog1', '.article1', 200);
+    positionImage('.fixed-image-blog2', '.article2', 0);
+    
+});
+
+
+function positionImage(imageSelector, startSelector, offset) {
+    var stickyImage = document.querySelector(imageSelector);
+    var startElement = document.querySelector(startSelector);
+    if (startElement && stickyImage) {
+        var adjustedTopPosition = startElement.offsetTop + offset;
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = adjustedTopPosition + 'px';
+    } else {
+        console.error('Element not found, check your selector or element existence.');
+    }
+}
+
+
+
+
+
+function scroll_Image(startSelector, endSelector, startOffset = 0, endOffset = 0) {
+    var stickyImage = document.querySelector('.fixed-image-blog');
+    var startElement = document.querySelector(startSelector);
+    var endElement = document.querySelector(endSelector);
+
+    // Calculate the start and end positions including offsets
+    var startPosition = startElement.offsetTop + startOffset;
+    var endPosition = endElement.offsetTop + endOffset;
+
+    var navbarHeight = document.querySelector('header').offsetHeight;
+    var scrollY = window.scrollY;
+
+    if (scrollY >= startPosition - navbarHeight && scrollY < endPosition) {
+        stickyImage.style.position = 'fixed';
+        stickyImage.style.top = navbarHeight + 'px'; // Adjust based on your header size
+    } else if (scrollY >= endPosition) {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = endPosition + 'px'; // Fix the image at the end position
+    } else {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = startPosition + 'px'; // Reset to the start position
+    }
+}
+
+
+function scroll_Image(startSelector, endSelector, startOffset = 0, endOffset = 0) {
+    var stickyImage = document.querySelector('.fixed-image-blog1');
+    var startElement = document.querySelector(startSelector);
+    var endElement = document.querySelector(endSelector);
+
+    // Calculate the start and end positions including offsets
+    var startPosition = startElement.offsetTop + startOffset;
+    var endPosition = endElement.offsetTop + endOffset;
+
+    var navbarHeight = document.querySelector('header').offsetHeight;
+    var scrollY = window.scrollY;
+
+    if (scrollY >= startPosition - navbarHeight && scrollY < endPosition) {
+        stickyImage.style.position = 'fixed';
+        stickyImage.style.top = navbarHeight + 'px'; // Adjust based on your header size
+    } else if (scrollY >= endPosition) {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = endPosition + 'px'; // Fix the image at the end position
+    } else {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = startPosition + 'px'; // Reset to the start position
+    }
+}
+
+function scroll_Image1(startSelector, endSelector, startOffset = 0, endOffset = 0) {
+    var stickyImage = document.querySelector('.fixed-image-blog2');
+    var startElement = document.querySelector(startSelector);
+    var endElement = document.querySelector(endSelector);
+
+    // Calculate the start and end positions including offsets
+    var startPosition = startElement.offsetTop + startOffset;
+    var endPosition = endElement.offsetTop + endOffset;
+
+    var navbarHeight = document.querySelector('header').offsetHeight;
+    var scrollY = window.scrollY;
+
+    if (scrollY >= startPosition - navbarHeight && scrollY < endPosition) {
+        stickyImage.style.position = 'fixed';
+        stickyImage.style.top = navbarHeight + 'px'; // Adjust based on your header size
+    } else if (scrollY >= endPosition) {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = endPosition + 'px'; // Fix the image at the end position
+    } else {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = startPosition + 'px'; // Reset to the start position
+    }
+}
+
 
 function scrollImage(startSelector, endSelector, offset = 0) {
     var stickyImage = document.querySelector('.fixed-image');
@@ -54,35 +151,6 @@ function scrollImage(startSelector, endSelector, offset = 0) {
     // Get the top position of the start and end elements
     var startPosition = startElement.offsetTop; // Adjust the start position by the offset
     var endPosition = endElement.offsetTop - offset;
-
-    var navbarHeight = document.querySelector('header').offsetHeight;
-    var scrollY = window.scrollY; // Current scroll position
-
-    // If the user scrolls past the start position but before the end position, fix the image
-    if (scrollY >= startPosition - navbarHeight && scrollY < endPosition) {
-        stickyImage.style.position = 'fixed';
-        stickyImage.style.top = navbarHeight + 'px'; // Stick the image below the navbar
-    } 
-    // If the user scrolls past the end position, fix the image at the end position
-    else if (scrollY >= endPosition) {
-        stickyImage.style.position = 'absolute';
-        stickyImage.style.top = endPosition + 'px'; // Fix the image at the end position
-    }
-    // When scrolling back up, return to the start position but don't go above it
-    else {
-        stickyImage.style.position = 'absolute';
-        stickyImage.style.top = startPosition + 'px'; // Reset to the start position
-    }
-}
-
-function scrollImage1(startSelector, endSelector, offset = 0) {
-    var stickyImage = document.querySelector('.fixed-image-2');
-    var startElement = document.querySelector(startSelector);
-    var endElement = document.querySelector(endSelector);
-
-    // Get the top position of the start and end elements
-    var startPosition = startElement.offsetTop + offset; // Adjust the start position by the offset
-    var endPosition = endElement.offsetTop;
 
     var navbarHeight = document.querySelector('header').offsetHeight;
     var scrollY = window.scrollY; // Current scroll position

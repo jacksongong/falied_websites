@@ -661,6 +661,113 @@ mark {
 }
 
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures alignment is consistent from the top */
+    width: 80%;
+    margin: 0 auto;
+}
+
+.fixed-image-blog, .fixed-image-blog1, .fixed-image-blog2 {
+    position: absolute;
+    right: 0;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 40px;
+    max-width: 700px;
+    width: 31%;
+    height: auto;
+    z-index: 1;
+    transition: top 0s linear;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Sofia", sans-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgb(245, 186, 118);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc;
+    max-width: 650px;
+    margin: 20px;
+    color: black;
+}
+
+.static-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Sofia", sans-serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgb(245, 186, 118);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc;
+    max-width: 650px;
+    margin: 20px;
+    color: black;
+}
+
+.content-section {
+    border: 2px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.fixed-image-blog h3, .fixed-image-blog1 h3, .fixed-image-blog2 h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+.fixed-image-blog p, .fixed-image-blog1 p, .fixed-image-blog2 p {
+    font-size: 1.0rem;
+    margin-bottom: 50px;
+}
+
+
+.not-moving-scroll {
+    position: absolute;
+    right: 0;
+    margin-left: auto;
+    margin-top: -30px;
+    margin-right: 40px;
+    max-width: 700px;
+    width: 31%;
+    height: auto;
+    z-index: 1;
+    transition: top 0s linear;
+}
+
+
+
+
+
+
+hr {
+    border: none;       /* Removes the default border */
+    height: 2px;        /* Sets the thickness of the line */
+    background-color: #000000; /* Sets the color of the line */
+    margin: 20px auto;        /* Adds vertical spacing and centers horizontally */
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 
 .black-link {
     color: black;
@@ -866,3 +973,123 @@ mark {
     font-weight: bold;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+/* RESOURCES and COMMUNITY OUTREACH Tab */
+
+/* Three Columns */
+/* Three Columns */
+.three-columns-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns across the container */
+    gap: 20px; /* Space between the main columns */
+    width: 100%; /* Full width of the parent */
+    padding: 20px; /* Padding around the entire container */
+}
+
+.category {
+    background-color: #dddddd; /* Background color for each category */
+    padding: 20px; /* Padding inside each category box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for styling */
+    border-radius: 8px; /* Rounded corners for styling */
+    
+}
+
+.category h2 {
+    text-align: center; /* Center-align the headers */
+    margin-bottom: 15px; /* Space below the header */
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns inside each category */
+    gap: 10px; /* Space between the two sub-columns */
+    margin-bottom: 20px; /* Space below the column set */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */    
+}
+
+.sub-column {
+    background-color: #fffdfb; /* Light cream background color */
+    padding: 15px; /* Padding inside each sub-column */
+    text-align: center; /* Center text alignment */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    border-radius: 8px; /* Rounded corners */    
+}
+
+
+
+
+
+.article {
+    background-color: #ffffff; /* White background for contrast */
+    border: 1px solid #ccc; /* Light grey border for subtle contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Padding inside each article */
+    margin-bottom: 20px; /* Space between articles */
+    border-radius: 8px; /* Rounded corners for a smoother look */
+}
+
+.article1 {
+    background-color: #ffffff; /* White background for contrast */
+    border: 1px solid #ccc; /* Light grey border for subtle contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Padding inside each article */
+    margin-bottom: 20px; /* Space between articles */
+    border-radius: 8px; /* Rounded corners for a smoother look */
+}
+
+
+.article1end {
+    background-color: #ffffff; /* White background for contrast */
+    border: 1px solid #ccc; /* Light grey border for subtle contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Padding inside each article */
+    margin-bottom: 20px; /* Space between articles */
+    border-radius: 8px; /* Rounded corners for a smoother look */
+}
+
+
+.article2 {
+    background-color: #ffffff; /* White background for contrast */
+    border: 1px solid #ccc; /* Light grey border for subtle contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Padding inside each article */
+    margin-bottom: 20px; /* Space between articles */
+    border-radius: 8px; /* Rounded corners for a smoother look */
+}
+
+
+.article2end {
+    background-color: #ffffff; /* White background for contrast */
+    border: 1px solid #ccc; /* Light grey border for subtle contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Padding inside each article */
+    margin-bottom: 20px; /* Space between articles */
+    border-radius: 8px; /* Rounded corners for a smoother look */
+}
+
+
+.article:last-child {
+    margin-bottom: 0; /* No bottom margin for the last article */
+}
+
+
+
+
+.blog-posts {
+    width: 65%; /* Adjust this value based on your layout needs */
+    margin: 0 auto; /* Centers the blog posts container in the middle of the page */
+    padding: 20px; /* Space around the contents inside the container */
+    background-color: #f8f8f8; /* Light grey background for a slight highlight */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    border-radius: 8px; /* Optional: rounded corners for a smoother look */
+    margin-left: 20px;
+
+}
+
