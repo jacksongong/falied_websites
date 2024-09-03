@@ -173,6 +173,32 @@ function scrollImage(startSelector, endSelector, offset = 0) {
 }
 
 
+function scroll_Image2(startSelector, endSelector, startOffset = 0, endOffset = 0) {
+    var stickyImage = document.querySelector('.fixed-image-2');
+    var startElement = document.querySelector(startSelector);
+    var endElement = document.querySelector(endSelector);
+
+    // Calculate the start and end positions including offsets
+    var startPosition = startElement.offsetTop + startOffset;
+    var endPosition = endElement.offsetTop + endOffset;
+
+    var navbarHeight = document.querySelector('header').offsetHeight;
+    var scrollY = window.scrollY;
+
+    if (scrollY >= startPosition - navbarHeight && scrollY < endPosition) {
+        stickyImage.style.position = 'fixed';
+        stickyImage.style.top = navbarHeight + 'px'; // Adjust based on your header size
+    } else if (scrollY >= endPosition) {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = endPosition + 'px'; // Fix the image at the end position
+    } else {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = startPosition + 'px'; // Reset to the start position
+    }
+}
+
+
+
 
 
 
