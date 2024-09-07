@@ -47,24 +47,23 @@ async function searchSite() {
 
 document.addEventListener('DOMContentLoaded', function () {
     // Ensure the image is correctly positioned at load
-    positionImage('.fixed-image-blog1', '.article1', 200);
-    positionImage('.fixed-image-blog2', '.article2', 0);
-    
+    positionImage('.fixed-image-blog1', '.article1', 20); // 20vh offset for blog1
+    positionImage('.fixed-image-blog2', '.article2', 0);  // No offset for blog2
+    positionImage('.fixed-image-2', '.article2', 5);     // 20vh offset for fixed-image-2
 });
 
-
-function positionImage(imageSelector, startSelector, offset) {
+function positionImage(imageSelector, startSelector, offsetVh) {
     var stickyImage = document.querySelector(imageSelector);
     var startElement = document.querySelector(startSelector);
     if (startElement && stickyImage) {
-        var adjustedTopPosition = startElement.offsetTop + offset;
+        // Calculate the adjusted top position using vh
+        var adjustedTopPosition = (startElement.offsetTop + offsetVh * window.innerHeight / 100) + 'px';
         stickyImage.style.position = 'absolute';
-        stickyImage.style.top = adjustedTopPosition + 'px';
+        stickyImage.style.top = adjustedTopPosition;
     } else {
         console.error('Element not found, check your selector or element existence.');
     }
 }
-
 
 
 
