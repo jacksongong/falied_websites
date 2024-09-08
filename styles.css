@@ -475,29 +475,26 @@ mark {
 .fixed-image {
     position: absolute;
     right: 0;
-    margin-left: auto; /* Centers the content when the viewport is smaller than 700px */
-    margin-top: 3vh; /* Centers the content when the viewport is smaller than 700px */
+    margin-top: 3vh; /* Vertically aligns the content */
     margin-right: 3vw; /* Adds margin from the right edge */
     max-width: 35vw; /* Maximum width of the container */
     width: 100%; /* Allow the container to shrink to the viewport size */
     height: auto;
     z-index: 1;
     transition: top 0s linear; /* Smooth linear transition when becoming sticky */
-    justify-content: center;
-    align-items: center;
+
+    text-align: center; /* Ensures text within is centered */
 }
-
-
-/* Side Strip */
-
-
 
 .fixed-image img {
     max-width: 100%; /* Ensures images are responsive */
     height: auto; /* Keeps the aspect ratio of the images */
     transition: box-shadow 0.3s; /* Smooth transition for hover effect */
-    margin-right:0.5vw
+    left:-2vw;
+    margin-left: -2vw; /* Centering horizontally within the container */
 }
+
+
 
 .fixed-image img:hover {
     box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.8); /* Adjust accordingly for hover effects */
@@ -509,13 +506,13 @@ mark {
     box-sizing: border-box; /* Ensures padding is included within the width */
     font-weight: bold; /* Makes the link bold */
     justify-content: center;
-    padding: 4vh; /* Adds space inside the box */
+    padding: 3vh; /* Adds space inside the box */
     background-color: rgb(245, 186, 118);
     border-radius: 3vh; /* Rounds the edges of the box */
     box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    border: 1vh solid #ccc; /* Optional: Adds a border to the box */
+    border: 0.4vh solid #ccc; /* Optional: Adds a border to the box */
     max-width: 40vw; /* Optional: Limits the width of the paragraph box */
-    margin-bottom: 4vh;
+    margin-bottom: 1.5vh;
     color:black;
 }
 
@@ -529,17 +526,21 @@ mark {
 
 
 .fixed-image img.click:hover{
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
-    box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Add a shadow to make it stand out */}
+    transform: scale(1.01); /* Slightly enlarge the image on hover */
+    box-shadow: 0 1vh 0.4vh rgba(0, 0, 0, 0.3); /* Add a shadow to make it stand out */
+    justify-content: center;
+    align-items: center;
+}
+    
 
 .fixed-image img.click {
     width: 75%; /* Ensure the image fits within the container */
     height: auto; /* Keep the aspect ratio */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
     margin-left: 2vw;
-    border: 2vw solid #f4a261; /* Add a border with the desired color */
+    border: 1.0vw solid #f4a261; /* Add a border with the desired color */
     border-radius: 2vw; /* Rounds the edges of the box */
-    padding: 2vw; /* Add padding between the image and the border */
+    padding: 1vh; /* Add padding between the image and the border */
     background-color: #264653; /* Fill color for the background around the image */
     box-sizing: border-box;
 }
@@ -552,7 +553,7 @@ mark {
     margin-left: auto; /* Centers the content when the viewport is smaller than 700px */
     margin-top: 4vh; /* Centers the content when the viewport is smaller than 700px */
     margin-right: 1vw; /* Adds margin from the right edge */
-    max-width: 43vw; /* Maximum width of the container */
+    max-width: 39vw; /* Maximum width of the container */
     width: 100%; /* Allow the container to shrink to the viewport size */
     height: auto;
     z-index: 1;
@@ -588,7 +589,7 @@ mark {
     background-color: rgb(245, 186, 118);
     border-radius: 2vh; /* Rounds the edges of the box */
     box-shadow: 0 2vh 4vw rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    border: 1vh solid #ccc; /* Optional: Adds a border to the box */
+    border: 0.4vh solid #ccc; /* Optional: Adds a border to the box */
     max-width: 40vw; /* Optional: Limits the width of the paragraph box */
     margin-bottom: 4vh;
     color:black;
@@ -604,7 +605,7 @@ mark {
 
 
 .fixed-image-2 img.click:hover{
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    transform: scale(1.01); /* Slightly enlarge the image on hover */
     box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Add a shadow to make it stand out */}
 
 .fixed-image-2 img.click {
@@ -630,7 +631,7 @@ mark {
     position: absolute;
     right: 0;
     margin-left: auto;
-    margin-top: 2vh;
+    margin-top: 15vh;
     margin-right: 3vw;
     max-width: 40vw;
     width: 31%;
@@ -651,8 +652,9 @@ mark {
     border-radius: 1vh;
     box-shadow: 0 1vh 1vw rgba(0, 0, 0, 0.1);
     border: 2px solid #ccc;
-    max-width: 250px;
-    margin: 20px;
+    max-width: 25vw;
+    margin-left: 3.5vw;
+
     color: black;
 }
 
@@ -669,8 +671,10 @@ mark {
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 2px solid #ccc;
-    max-width: 650px;
-    margin: 20px;
+    max-width: 30vw;
+    margin-bottom: 20px;
+    margin-top: 2vh;
+
     color: black;
 }
 
@@ -687,11 +691,13 @@ mark {
     font-size: 1.2rem;
     margin: 5px 0;
     color: #333;
+
 }
 
 .fixed-image-blog p, .fixed-image-blog1 p, .fixed-image-blog2 p {
     font-size: 1.0rem;
-    margin-bottom: 50px;
+    margin-bottom: 4vh;
+
 }
 
 

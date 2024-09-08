@@ -45,27 +45,47 @@ async function searchSite() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Ensure the image is correctly positioned at load
-    positionImage('.fixed-image-blog1', '.article1', 20); // 20vh offset for blog1
-    positionImage('.fixed-image-blog2', '.article2', 0);  // No offset for blog2
-    positionImage('.fixed-image-2', '.article2', 5);     // 20vh offset for fixed-image-2
-});
+window.onload = function() {
+    setTimeout(() => {
+        positionImagesBasedOnScroll();
+    }, 100);
 
-function positionImage(imageSelector, startSelector, offsetVh) {
+    window.addEventListener('scroll', positionImagesBasedOnScroll);
+};
+
+function positionImagesBasedOnScroll() {
+    positionImage('.fixed-image-blog1', '.article1', 0, 1000); // Example offsets for blog1
+    positionImage('.fixed-image-blog2', '.article2', 0, 1000);  // Example offsets for blog2
+    positionImage('.fixed-image-2', '.article2', 200, 700);    // Example offsets for fixed-image-2
+    positionImage('.fixed-image', '.article2', 200, 700);    // Example offsets for fixed-image-2
+
+}
+
+function positionImage(imageSelector, startSelector, startOffset, endOffset) {
     var stickyImage = document.querySelector(imageSelector);
     var startElement = document.querySelector(startSelector);
     if (startElement && stickyImage) {
-        // Calculate the adjusted top position using vh
-        var adjustedTopPosition = (startElement.offsetTop + offsetVh * window.innerHeight / 100) + 'px';
-        stickyImage.style.position = 'absolute';
-        stickyImage.style.top = adjustedTopPosition;
+        var startPosition = startElement.offsetTop + startOffset;
+        var endPosition = startElement.offsetTop + endOffset;
+
+        // Check the current scroll position
+        var scrollY = window.pageYOffset;
+
+        // Check if within the sticky range
+        if (scrollY > startPosition && scrollY < endPosition) {
+            stickyImage.style.position = 'fixed';
+            stickyImage.style.top = '0px';  // Fix to top when in the range
+        } else if (scrollY >= endPosition) {
+            stickyImage.style.position = 'absolute';
+            stickyImage.style.top = endPosition + 'px';  // Place at end offset when scrolled past
+        } else {
+            stickyImage.style.position = 'absolute';
+            stickyImage.style.top = startPosition + 'px';  // Place at start offset when below range
+        }
     } else {
         console.error('Element not found, check your selector or element existence.');
     }
 }
-
-
 
 
 function scroll_Image(startSelector, endSelector, startOffset = 0, endOffset = 0) {
