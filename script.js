@@ -45,47 +45,55 @@ async function searchSite() {
     }
 }
 
+// Initial positioning when the page is loaded
 window.onload = function() {
     setTimeout(() => {
         positionImagesBasedOnScroll();
-    }, 100);
+    }, 100); // Delay to ensure scroll positions are restored
 
+    // Add scroll event listener to update positions on scroll
     window.addEventListener('scroll', positionImagesBasedOnScroll);
 };
 
 function positionImagesBasedOnScroll() {
-    positionImage('.fixed-image-blog1', '.article1', 0, 1000); // Example offsets for blog1
-    positionImage('.fixed-image-blog2', '.article2', 0, 1000);  // Example offsets for blog2
-    positionImage('.fixed-image-2', '.article2', 200, 700);    // Example offsets for fixed-image-2
-    positionImage('.fixed-image', '.article2', 200, 700);    // Example offsets for fixed-image-2
+    positionImage('.fixed-image-blog1', '.not-moving-scroll', 0, 1000); // Adjust to start after the not-moving-scroll
+    positionImage('.fixed-image-blog2', '.article2', 0, 1000); // Adjust start offset to 0 for blog2
+    positionImage('.fixed-image-2', '.article2', 0, 700);    // Existing offsets for fixed-image-2
+    positionImage('.fixed-image', '.article2', 0, 700);    // Existing offsets for fixed-image-2
 
 }
 
-function positionImage(imageSelector, startSelector, startOffset, endOffset) {
+function positionImage(imageSelector, referenceSelector, startOffset, endOffset) {
     var stickyImage = document.querySelector(imageSelector);
-    var startElement = document.querySelector(startSelector);
-    if (startElement && stickyImage) {
-        var startPosition = startElement.offsetTop + startOffset;
-        var endPosition = startElement.offsetTop + endOffset;
+    var referenceElement = document.querySelector(referenceSelector);
+    if (referenceElement && stickyImage) {
+        // Adjust start and end positions based on the reference element
+        var referenceRect = referenceElement.getBoundingClientRect();
+        var referenceEnd = referenceRect.bottom + window.scrollY;
+        var startPosition = referenceEnd + startOffset; // Dynamic start position based on the reference
+        var endPosition = startPosition + endOffset;
 
-        // Check the current scroll position
         var scrollY = window.pageYOffset;
 
-        // Check if within the sticky range
-        if (scrollY > startPosition && scrollY < endPosition) {
+        if (scrollY >= startPosition && scrollY < endPosition) {
             stickyImage.style.position = 'fixed';
-            stickyImage.style.top = '0px';  // Fix to top when in the range
+            stickyImage.style.top = '0px'; // Stick to the top of the viewport
         } else if (scrollY >= endPosition) {
             stickyImage.style.position = 'absolute';
-            stickyImage.style.top = endPosition + 'px';  // Place at end offset when scrolled past
+            stickyImage.style.top = endPosition + 'px'; // Fix at the end position
         } else {
             stickyImage.style.position = 'absolute';
-            stickyImage.style.top = startPosition + 'px';  // Place at start offset when below range
+            stickyImage.style.top = startPosition + 'px'; // Start at the original position
         }
     } else {
         console.error('Element not found, check your selector or element existence.');
     }
 }
+
+
+
+
+
 
 
 function scroll_Image(startSelector, endSelector, startOffset = 0, endOffset = 0) {

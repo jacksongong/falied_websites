@@ -627,11 +627,24 @@ mark {
     margin: 0 auto;
 }
 
-.fixed-image-blog, .fixed-image-blog1, .fixed-image-blog2 {
+.fixed-image-blog, .fixed-image-blog1 {
     position: absolute;
     right: 0;
     margin-left: auto;
-    margin-top: 15vh;
+    margin-top: 7vh;
+    margin-right: 3vw;
+    max-width: 40vw;
+    width: 31%;
+    height: auto;
+    z-index: 1;
+    transition: top 0s linear;
+}
+
+.fixed-image-blog2 {
+    position: absolute;
+    right: 0;
+    margin-left: auto;
+    margin-top: 5vh;
     margin-right: 3vw;
     max-width: 40vw;
     width: 31%;
