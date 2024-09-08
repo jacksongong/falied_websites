@@ -291,7 +291,8 @@ mark {
 }
 
 .body_font1 img {
-    max-width: 50vw; /* Limit image width to 50% of the viewport width */
+    max-width: 40vw; /* Limit image width to 50% of the viewport width */
+    margin-right:20vw;
     height: auto; /* Maintain image aspect ratio */
     margin-left: 4vw; /* Space from the left within its container */
 }
@@ -489,7 +490,7 @@ mark {
     position: absolute;
     right: 0;
     margin-left: auto; /* Centers the content when the viewport is smaller than 700px */
-    margin-top: 4vh; /* Centers the content when the viewport is smaller than 700px */
+    margin-top: 10vh; /* Centers the content when the viewport is smaller than 700px */
     margin-right: 2vw; /* Adds margin from the right edge */
     max-width: 35vw; /* Maximum width of the container */
     width: 100%; /* Allow the container to shrink to the viewport size */
@@ -580,39 +581,41 @@ mark {
 
 .fixed-image-2 {
     position: absolute;
-    right: 0;
-    margin-left: auto; /* Centers the content when the viewport is smaller than 700px */
-    margin-top: 4vh; /* Centers the content when the viewport is smaller than 700px */
-    margin-right: 1vw; /* Adds margin from the right edge */
-    max-width: 39vw; /* Maximum width of the container */
+    right: -60vw;
+    margin-left: auto; /* Centers the content for smaller viewports */
+    margin-top: 4vh;
+    margin-right: 1vw; /* Right edge margin */
     width: 100%; /* Allow the container to shrink to the viewport size */
     height: auto;
     z-index: 1;
     transition: top 0s linear; /* Smooth linear transition when becoming sticky */
-    justify-content: center;
-    align-items: center;
 }
 
 
-/* Side Strip */
 
+.fixed-image-2 img.flier {
+    max-width: 14.5vh; /* Adjusts each image's maximum width to fit within the row */
+    height: auto; /* Maintains aspect ratio */
+    transition: box-shadow 0.3s; /* Smooth transition for hover effects */
+}
 .fixed-image-2 img {
-    max-width: 100%; /* Ensures images are responsive */
-    height: auto; /* Keeps the aspect ratio of the images */
-    transition: box-shadow 0.3s; /* Smooth transition for hover effect */
-    margin-right:0.5vw
+    max-width: 60vh; /* Adjusts each image's maximum width to fit within the row */
+    height: auto; /* Maintains aspect ratio */
+    transition: box-shadow 0.3s; /* Smooth transition for hover effects */
 }
 
 .fixed-image-2 img:hover {
-    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.8); /* Adjust accordingly for hover effects */
+    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.8); /* Enhances shadow on hover */
 }
+
 
 
 
 .fixed-image-2 p{
+    right:0;
     display: flex;
     font-family: "Sofia", sans-serif;
-    font-size: 4.5vh;
+    font-size: 3.5vh;
     box-sizing: border-box; /* Ensures padding is included within the width */
     font-weight: bold; /* Makes the link bold */
     justify-content: center;
@@ -621,8 +624,10 @@ mark {
     border-radius: 2vh; /* Rounds the edges of the box */
     box-shadow: 0 2vh 4vw rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
     border: 0.4vh solid #ccc; /* Optional: Adds a border to the box */
-    max-width: 40vw; /* Optional: Limits the width of the paragraph box */
+    max-width: 35vw; /* Optional: Limits the width of the paragraph box */
     margin-bottom: 4vh;
+    margin-left: 2vw;
+
     color:black;
 }
 
