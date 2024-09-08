@@ -186,7 +186,7 @@ mark {
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(216, 130, 2); /* Text color */
-    font-size: 4.75rem; /* Adjust text size */
+    font-size: 10vh; /* Adjust text size */
     font-weight: bold;
     text-align: center;
     font-family: "Abril Fatface", Poppins;
@@ -199,6 +199,7 @@ mark {
     
     padding: 2vh; /* Adds some padding around the text */
     border-radius: 1vh; /* Optionally, add rounded corners */
+    
 }
 
 
@@ -218,7 +219,7 @@ mark {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */   
     font-family: "Spectral", Rubik;
-    font-size: 2.25rem;
+    font-size: 5vh;
     margin-bottom: 2vh;
     background-color: rgb(230, 174, 122); /* Set the background color to gray */
     width: 100vw; /* Make the background span the full width of the viewport */
@@ -231,7 +232,7 @@ mark {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */   
     font-family: "Spectral", Rubik;
-    font-size: 2rem;
+    font-size: 4vh;
     background-color: rgb(250, 240, 235); /* Set the background color to gray */
     width: 100vw; /* Make the background span the full width of the viewport */
     padding: 2vh; /* Adds padding around the text */
@@ -249,7 +250,7 @@ mark {
     padding-left: 7vw; 
     box-sizing: border-box; /* Ensures padding is included within the width */
     max-width: 100vw; /* Limits text width for readability */
-    font-size: 1.5rem;
+    font-size: 3.5vh;
     line-height: 2.5; /* Adds vertical space between lines of text */
 }
 .body_font p{
@@ -261,11 +262,41 @@ mark {
 
 .body_font img{
     max-width: 40vw;
-    margin-left:10vw;
+    margin-left:4vw;
     justify-content: left; /* Center horizontally */
     align-items: left; /* Center vertically */   
     height: auto;
 }
+
+
+
+.body_font1 {
+    font-family: "Spectral", Rubik;
+    background-color: rgb(250, 245, 235); /* Set the background color */
+    width: 100vw; /* Ensure the background spans the full width */
+    padding-left: 7vw; 
+    box-sizing: border-box; /* Include padding in the width calculation */
+    max-width: 100vw; /* Ensure the container doesn't exceed the viewport width */
+    font-size: 3.5vh;
+    line-height: 2.5; /* Increase line spacing for readability */
+    display: flex; /* Use flex layout to better control child elements */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: flex-start; /* Align items to the start of the flex container */
+}
+
+.body_font1 p {
+    max-width: 50vw; /* Limit paragraph width to 50% of the viewport width */
+    width: auto; /* Auto width allows content to grow but respects max-width */
+    margin-bottom: 3vh; /* Space between paragraphs */
+}
+
+.body_font1 img {
+    max-width: 50vw; /* Limit image width to 50% of the viewport width */
+    height: auto; /* Maintain image aspect ratio */
+    margin-left: 4vw; /* Space from the left within its container */
+}
+
+
 
 .first_header_font {
     font-family: "Spectral", Rubik;
@@ -273,7 +304,7 @@ mark {
     width: 100vw; /* Make the background span the full width of the viewport */ 
     box-sizing: border-box; /* Ensures padding is included within the width */
     max-width: 100vw; /* Limits text width for readability */
-    font-size: 1.5rem;
+    font-size: 3.5vh;
     line-height: 2.5; /* Adds vertical space between lines of text */
     padding-left: 10vw;
     padding-top: 2vh;
@@ -287,7 +318,7 @@ mark {
     width: 100vw; /* Make the background span the full width of the viewport */ 
     box-sizing: border-box; /* Ensures padding is included within the width */
     max-width: 100vw; /* Limits text width for readability */
-    font-size: 1.5rem;
+    font-size: 3.5vh;
     line-height: 2.5; /* Adds vertical space between lines of text */
     padding-left: 10vw;
     padding-top: 2vh;
@@ -303,7 +334,7 @@ mark {
     padding-left: 10vw; /* Adjusts the text's position inside the container */
     padding-right: 3vw; /* Optional: Add some padding on the right for better spacing */
     padding-top: 2vh; /* Optional: Add padding on top */
-    font-size: 2rem;
+    font-size: 3.5vh;
     line-height: 2.5; /* Adds vertical space between lines of text */
 }
 
@@ -352,7 +383,7 @@ mark {
 
 .leadership p.name {
     font-family: "Spectral", Rubik;
-    font-size: 1.2rem; /* Adjust font size for the name */
+    font-size: 3vh; /* Adjust font size for the name */
     color: #333; /* Text color */
     font-weight: bold; /* Make the name bold */
     margin-top: 3vh; /* Space between the image and the name */
@@ -360,7 +391,7 @@ mark {
 
 .leadership p.position {
     font-family: "Spectral", Rubik;
-    font-size: 1.1rem; /* Slightly smaller font size for the position */
+    font-size: 2vh; /* Slightly smaller font size for the position */
     color: #666; /* Slightly lighter text color */
     margin-top: 1.5vh; /* Space between the name and the position */
     text-decoration: underline;
@@ -368,7 +399,7 @@ mark {
 
 .leadership p.description {
     font-family: "Spectral", Rubik;
-    font-size: 1rem; /* Smaller font size for the description */
+    font-size: 1.9vh; /* Smaller font size for the description */
     color: #333; /* Text color */
     margin-top: 1.5vh; /* Space between the position and the description */
 }
@@ -395,7 +426,7 @@ mark {
     padding-left: 10vw; /* Adjusts the text's position inside the container */
     padding-right: 4vw; /* Optional: Add some padding on the right for better spacing */
     padding-top: 2vh; /* Optional: Add padding on top */
-    font-size: 2rem;
+    font-size: 3.5vh;
     line-height: 2.5; /* Adds vertical space between lines of text */
 }
 
@@ -446,7 +477,7 @@ mark {
 /* Optional: Styling for club headings */
 .club h3 {
     margin-bottom: 2vh;
-    font-size: 1.7rem;
+    font-size: 3.5vh;
     font-family: Arial, sans-serif;
 }
 
@@ -502,7 +533,7 @@ mark {
 .fixed-image p{
     display: flex;
     font-family: "Sofia", sans-serif;
-    font-size: 2.2rem;
+    font-size: 4vh;
     box-sizing: border-box; /* Ensures padding is included within the width */
     font-weight: bold; /* Makes the link bold */
     justify-content: center;
@@ -517,7 +548,7 @@ mark {
 }
 
 .fixed-image p.link:hover{
-    font-size: 2.3rem; /* Increase font size on hover */
+    font-size: 4.1vh; /* Increase font size on hover */
     text-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
 
 }
@@ -581,7 +612,7 @@ mark {
 .fixed-image-2 p{
     display: flex;
     font-family: "Sofia", sans-serif;
-    font-size: 2.2rem;
+    font-size: 4.5vh;
     box-sizing: border-box; /* Ensures padding is included within the width */
     font-weight: bold; /* Makes the link bold */
     justify-content: center;
@@ -596,7 +627,7 @@ mark {
 }
 
 .fixed-image-2 p.link:hover{
-    font-size: 2.3rem; /* Increase font size on hover */
+    font-size: 4.6vh; /* Increase font size on hover */
     text-shadow: 1vh 1vh 2vw rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
 
 }
@@ -644,7 +675,6 @@ mark {
     position: absolute;
     right: 0;
     margin-left: auto;
-    margin-top: 5vh;
     margin-right: 3vw;
     max-width: 40vw;
     width: 31%;
@@ -658,7 +688,7 @@ mark {
     align-items: center;
     justify-content: center;
     font-family: "Sofia", sans-serif;
-    font-size: 2.2rem;
+    font-size: 4vh;
     font-weight: bold;
     padding: 2vh;
     background-color: rgb(245, 186, 118);
@@ -667,8 +697,8 @@ mark {
     border: 2px solid #ccc;
     max-width: 25vw;
     margin-left: 3.5vw;
-
     color: black;
+
 }
 
 .static-title {
@@ -677,8 +707,9 @@ mark {
     justify-content: center;
     text-align: center;
     font-family: "Sofia", sans-serif;
-    font-size: 3.5rem;
+    font-size: 4.5vh;
     font-weight: bold;
+    text-decoration: underline;
     padding: 20px;
     background-color: rgb(245, 186, 118);
     border-radius: 15px;
@@ -695,20 +726,22 @@ mark {
     border: 2px solid #ccc;
     padding: 20px;
     background-color: #fff;
-    margin: 10px 0;
+    margin-left: 1vw;
+    margin-top: 0.7vh;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
 .fixed-image-blog h3, .fixed-image-blog1 h3, .fixed-image-blog2 h3 {
-    font-size: 1.2rem;
+    font-size: 2.5vh;
     margin: 5px 0;
     color: #333;
 
 }
 
 .fixed-image-blog p, .fixed-image-blog1 p, .fixed-image-blog2 p {
-    font-size: 1.0rem;
+    font-size: 2vh;
     margin-bottom: 4vh;
 
 }
@@ -789,7 +822,7 @@ hr {
     justify-content: right;
     align-items: center;
     font-family: "Fjalla On", Libre Baskerville;
-    font-size: 1.5rem;
+    font-size: 3vh;
 }
 
 
@@ -802,7 +835,7 @@ hr {
 .section_bottom_about img.instagram-icon{
     position: absolute; /* Positions the icon absolutely within the bar */
     left: 1vw; /* Places the icon at the leftmost side of the bar */
-    border: 0.5vh solid black; /* Adds a 2px black border around the icon */
+    border: 0.2vh solid black; /* Adds a 2px black border around the icon */
     border-radius: 25%; /* Optionally, makes the border rounded */
     width: 50px; /* Adjust size as needed */
     height: auto;
@@ -830,7 +863,7 @@ hr {
     justify-content: space-between; /* Space between items (left and right alignment) */
     align-items: center; /* Centers content vertically */
     font-family: "Fjalla On", Libre Baskerville;
-    font-size: 1.5rem;
+    font-size: 3vh;
 }
 
 .section_bottom .left-content {
@@ -856,16 +889,18 @@ hr {
 }
 
 .section_bottom img.social {
-    margin-left: 20px; /* Adds space to the right of each image */
-    border: 2px solid black; /* Adds a 2px black border around the icon */
+    margin-left: 1vw; /* Adds space to the right of each image */
+    margin-top: 1vh; /* Adds space to the right of each image */
+
+    border: 0.3vh solid black; /* Adds a 2px black border around the icon */
     border-radius: 25%; /* Optionally, makes the border rounded */
-    width: 50px; /* Adjust size as needed */
+    width: 5vh; /* Adjust size as needed */
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
 .section_bottom img.social:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
     border-radius: 25%;
     transform: scale(1.05); /* Slightly enlarge the image on hover */
 }
