@@ -519,10 +519,11 @@ mark {
 }
 
 .fixed-image img {
-    max-width: 100%; /* Ensures images are responsive */
     height: auto; /* Keeps the aspect ratio of the images */
     transition: box-shadow 0.3s; /* Smooth transition for hover effect */
     left:-2vw;
+    max-width: 60vh; /* Adjusts each image's maximum width to fit within the row */
+
     margin-left: -2vw; /* Centering horizontally within the container */
 }
 
@@ -534,7 +535,7 @@ mark {
 .fixed-image p{
     display: flex;
     font-family: "Sofia", sans-serif;
-    font-size: 4vh;
+    font-size: 3vh;
     box-sizing: border-box; /* Ensures padding is included within the width */
     font-weight: bold; /* Makes the link bold */
     justify-content: center;
@@ -615,7 +616,7 @@ mark {
     right:0;
     display: flex;
     font-family: "Sofia", sans-serif;
-    font-size: 3.5vh;
+    font-size: 3vh;
     box-sizing: border-box; /* Ensures padding is included within the width */
     font-weight: bold; /* Makes the link bold */
     justify-content: center;
@@ -712,7 +713,7 @@ mark {
     justify-content: center;
     text-align: center;
     font-family: "Sofia", sans-serif;
-    font-size: 4.5vh;
+    font-size: 4vh;
     font-weight: bold;
     text-decoration: underline;
     padding: 20px;
@@ -756,9 +757,10 @@ mark {
     position: absolute;
     right: 0;
     margin-left: auto;
-    margin-top: -30px;
-    margin-right: 40px;
-    max-width: 700px;
+    margin-top: -4vh;
+    margin-right: 1.5vw;
+    font-size: 2vh;
+    max-width: 40vw;
     width: 31%;
     height: auto;
     z-index: 1;
