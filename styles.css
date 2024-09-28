@@ -221,7 +221,7 @@ mark {
     font-family: "Spectral", Rubik;
     font-size: 5vh;
     margin-bottom: 2vh;
-    background-color: rgb(230, 174, 122); /* Set the background color to gray */
+    background-color: rgb(253, 230, 195); /* Set the background color to gray */
     width: 100vw; /* Make the background span the full width of the viewport */
     padding: 2vh; /* Adds padding around the text */
     box-sizing: border-box; /* Ensures padding is included within the width */
