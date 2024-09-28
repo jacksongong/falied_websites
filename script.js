@@ -181,8 +181,37 @@ function scrollImage(startSelector, endSelector, offset = 0) {
     }
 }
 
+function scrollImage1(startSelector, endSelector, offset = 0) {
+    var stickyImage = document.querySelector('.fixed-image-1');
+    var startElement = document.querySelector(startSelector);
+    var endElement = document.querySelector(endSelector);
 
-function scroll_Image2(startSelector, endSelector, startOffset = 0, endOffset = 0) {
+    // Get the top position of the start and end elements
+    var startPosition = startElement.offsetTop; // Adjust the start position by the offset
+    var endPosition = endElement.offsetTop - offset;
+
+    var navbarHeight = document.querySelector('header').offsetHeight;
+    var scrollY = window.scrollY; // Current scroll position
+
+    // If the user scrolls past the start position but before the end position, fix the image
+    if (scrollY >= startPosition - navbarHeight && scrollY < endPosition) {
+        stickyImage.style.position = 'fixed';
+        stickyImage.style.top = navbarHeight + 'px'; // Stick the image below the navbar
+    } 
+    // If the user scrolls past the end position, fix the image at the end position
+    else if (scrollY >= endPosition) {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = endPosition + 'px'; // Fix the image at the end position
+    }
+    // When scrolling back up, return to the start position but don't go above it
+    else {
+        stickyImage.style.position = 'absolute';
+        stickyImage.style.top = startPosition + 'px'; // Reset to the start position
+    }
+}
+
+
+function scrollImage2(startSelector, endSelector, startOffset = 0, endOffset = 0) {
     var stickyImage = document.querySelector('.fixed-image-2');
     var startElement = document.querySelector(startSelector);
     var endElement = document.querySelector(endSelector);

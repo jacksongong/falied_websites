@@ -327,6 +327,21 @@ mark {
 
 }
 
+
+.selected_header_font1 {
+    font-family: "Spectral", Rubik;
+    background-color: rgb(253, 230, 195); /* Set the background color to gray */
+    width: 100vw; /* Make the background span the full width of the viewport */ 
+    box-sizing: border-box; /* Ensures padding is included within the width */
+    max-width: 100vw; /* Limits text width for readability */
+    font-size: 3.5vh;
+    line-height: 2.5; /* Adds vertical space between lines of text */
+    padding-left: 10vw;
+    padding-top: 2vh;
+    margin-top: 0.5vh;
+
+}
+
 .header_font {
     font-family: "Spectral", Rubik;
     background-color: rgb(253, 230, 195); /* Set the background color to gray */
@@ -550,8 +565,8 @@ mark {
 }
 
 .fixed-image p.link:hover{
-    font-size: 4.1vh; /* Increase font size on hover */
     text-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+    font-size: 150%; /* Increases the font size to 120% of its original on hover */
 
 }
 
@@ -607,6 +622,7 @@ mark {
 
 .fixed-image-2 img:hover {
     box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.8); /* Enhances shadow on hover */
+    
 }
 
 
@@ -633,9 +649,8 @@ mark {
 }
 
 .fixed-image-2 p.link:hover{
-    font-size: 4.6vh; /* Increase font size on hover */
-    text-shadow: 1vh 1vh 2vw rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
-
+    text-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+    font-size: 150%; /* Increases the font size to 120% of its original on hover */
 }
 
 
@@ -654,6 +669,85 @@ mark {
     background-color: #264653; /* Fill color for the background around the image */
     box-sizing: border-box;
 }
+
+
+
+
+.fixed-image-1 {
+    position: absolute;
+    right: -60vw;
+    margin-left: auto; /* Centers the content for smaller viewports */
+    margin-top: 4vh;
+    margin-right: 1vw; /* Right edge margin */
+    width: 100%; /* Allow the container to shrink to the viewport size */
+    height: auto;
+    z-index: 1;
+    transition: top 0s linear; /* Smooth linear transition when becoming sticky */
+}
+
+
+
+.fixed-image-1 img.flier {
+    max-width: 14.5vh; /* Adjusts each image's maximum width to fit within the row */
+    height: auto; /* Maintains aspect ratio */
+    transition: box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+.fixed-image-1 img {
+    max-width: 60vh; /* Adjusts each image's maximum width to fit within the row */
+    height: auto; /* Maintains aspect ratio */
+    transition: box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.fixed-image-1 img:hover {
+    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.8); /* Enhances shadow on hover */
+    
+}
+
+
+
+
+.fixed-image-1 p{
+    right:0;
+    display: flex;
+    font-family: "Sofia", sans-serif;
+    font-size: 3vh;
+    box-sizing: border-box; /* Ensures padding is included within the width */
+    font-weight: bold; /* Makes the link bold */
+    justify-content: center;
+    padding: 3vh; /* Adds space inside the box */
+    background-color: rgb(245, 186, 118);
+    border-radius: 2vh; /* Rounds the edges of the box */
+    box-shadow: 0 2vh 4vw rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border: 0.4vh solid #ccc; /* Optional: Adds a border to the box */
+    max-width: 35vw; /* Optional: Limits the width of the paragraph box */
+    margin-bottom: 4vh;
+    margin-left: 2vw;
+
+    color:black;
+}
+
+.fixed-image-1 p.link:hover{
+    text-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+    font-size: 150%; /* Increases the font size to 120% of its original on hover */
+}
+
+
+
+
+.fixed-image-1 img.click:hover{
+    transform: scale(1.01); /* Slightly enlarge the image on hover */
+    box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Add a shadow to make it stand out */}
+
+.fixed-image-1 img.click {
+    width: 75%; /* Ensure the image fits within the container */
+    height: auto; /* Keep the aspect ratio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    border-radius: 1vh; /* Rounds the edges of the box */
+    padding: 2vh; /* Add padding between the image and the border */
+    background-color: #4c70ad; /* Fill color for the background around the image */
+    box-sizing: border-box;
+}
+
 
 
 .container {
