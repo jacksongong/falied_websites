@@ -586,7 +586,7 @@ mark {
     height: auto; /* Keep the aspect ratio */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
     margin-left: 2vw;
-    border: 1.0vw solid #f4a261; /* Add a border with the desired color */
+    border: 1.0vw solid #4093c7; /* Add a border with the desired color */
     border-radius: 2vw; /* Rounds the edges of the box */
     padding: 1vh; /* Add padding between the image and the border */
     background-color: #264653; /* Fill color for the background around the image */
@@ -1105,7 +1105,7 @@ hr {
 }
 
 .category {
-    background-color: #dddddd; /* Background color for each category */
+    background-color: #fff4d7; /* Background color for each category */
     padding: 20px; /* Padding inside each category box */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for styling */
     border-radius: 8px; /* Rounded corners for styling */
@@ -1203,5 +1203,41 @@ hr {
     border-radius: 8px; /* Optional: rounded corners for a smoother look */
     margin-left: 20px;
 
+}
+
+
+
+
+
+.background-image {
+    background-image: url('C:/Website_Building/jacksongong.github.io/images_resources/background');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full height */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+}
+
+.content {
+    width: 50vw; /* Adjust width as necessary */
+    padding: 20px;
+    text-align: center; /* Centers the text inside the box */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    transform: translateY(-25%); /* Move the box up by 25% relative to its center position */
+}
+
+.text {
+    width: 40vw; /* Limit the width of the text */
+    margin: 0 auto; /* Center the text block horizontally */
+}
+
+.line {
+    border: none;
+    height: 2px;
+    background-color: black; /* Line color */
+    width: 80%; /* Relative to the parent container */
+    margin: 20px auto; /* Centers the line horizontally and adds spacing */
 }
 
