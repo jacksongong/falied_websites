@@ -1,428 +1,895 @@
 
-@import url('https://fonts.googleapis.com/css?family=Sofia|family=Roboto');
+    @import url('https://fonts.googleapis.com/css?family=Sofia|family=Roboto');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f1efe8;
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f1efe8;
+        margin: 0; /* Remove default margins */
+        padding: 0; /* Remove default padding */
 
-}
+    }
 
-header {
-    background-color: rgb(233, 131, 14);
-    color: rgb(7, 6, 6);
-    padding: 1vh 0;
-    position: fixed; /* Fixes the header at the top of the page */
-    width: 100%; /* Ensures the header spans the full width */
-    top: 0; /* Positions the header at the top of the page */
-    left: 0;
-    z-index: 1000; /* Keeps the header on top of other content */
-}
+    header {
+        background-color: rgb(233, 131, 14);
+        color: rgb(7, 6, 6);
+        padding: 1vh 0;
+        position: fixed; /* Fixes the header at the top of the page */
+        width: 100%; /* Ensures the header spans the full width */
+        top: 0; /* Positions the header at the top of the page */
+        left: 0;
+        z-index: 1000; /* Keeps the header on top of other content */
+    }
 
-nav {
-    max-width: 100vw;
-    margin: auto;
-    margin-right: 3vw;
-    display: flex;
-    justify-content: flex-end;
-}
-
-
-.logo {
-    position: absolute; /* Positions the logo absolutely */
-    left: 1.5vw; /* Align the logo to the very left of the navbar */
-    top: 50%; /* Vertically centers the logo */
-    transform: translateY(-50%); /* Adjusts vertical alignment to ensure it's perfectly centered */
-}
-
-.logo img {
-    max-width: 5vh; /* Set a max width for the logo */
-    height: auto; /* Keep the aspect ratio of the logo */
-    display: block;
-}
-
-.logo:hover {
-    box-shadow: 0 1vw 1vw rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
-    border-radius: 25%;
-}
+    nav {
+        max-width: 100vw;
+        margin: auto;
+        margin-right: 3vw;
+        display: flex;
+        justify-content: flex-end;
+    }
 
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
+    .logo {
+        position: absolute; /* Positions the logo absolutely */
+        left: 1.5vw; /* Align the logo to the very left of the navbar */
+        top: 50%; /* Vertically centers the logo */
+        transform: translateY(-50%); /* Adjusts vertical alignment to ensure it's perfectly centered */
+    }
 
-.nav-links li {
-    margin: 0 1vw;
-}
+    .logo img {
+        max-width: 5vh; /* Set a max width for the logo */
+        height: auto; /* Keep the aspect ratio of the logo */
+        display: block;
+    }
 
-.nav-links a {
-    color: #1a1717;
-    text-decoration: none;
-    font-size: 1.2vw;
-    font-family: 'Georgia', serif;
-}
-
-.nav-links a:hover {
-    font-weight: bold;
-}
-
-.header-content {
-    background-color: #ffffff;
-    padding: 3vw;
-    text-align: center;
-}
-
-.search-icon {
-    width: 1.5vw;
-    height: auto;
-    vertical-align: middle;
-    transition: transform 0.3s ease;
-
-}
+    .logo:hover {
+        box-shadow: 0 1vw 1vw rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
+        border-radius: 25%;
+    }
 
 
-.search-icon:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-}
+    .nav-links {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0 1vw;
+    }
+
+    .nav-links a {
+        color: #1a1717;
+        text-decoration: none;
+        font-size: 1.2vw;
+        font-family: 'Georgia', serif;
+    }
+
+    .nav-links a:hover {
+        font-weight: bold;
+    }
+
+    .header-content {
+        background-color: #ffffff;
+        padding: 3vw;
+        text-align: center;
+    }
+
+    .search-icon {
+        width: 1.5vw;
+        height: auto;
+        vertical-align: middle;
+        transition: transform 0.3s ease;
+
+    }
 
 
-.search-container {
-    max-width: 30vw;
-    margin: 1vw auto;
-    padding: 1vw;
-    background-color: white;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 1vw;
-    font-size: 1vw;
-    border-radius: 0.3vw;
-    margin-top: 1vh;
-}
-
-h1 {
-    margin-bottom: 1vh;
-    color: #333;
-}
-
-p {
-    color: #555;
-}
+    .search-icon:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
 
 
-.search-container {
-    max-width: 80vw;
-    margin: 3vw auto;
-    margin-top:12vh;
+    .search-container {
+        max-width: 30vw;
+        margin: 1vw auto;
+        padding: 1vw;
+        background-color: white;
+    }
 
-    padding: 1.7vw;
-    background-color: white;
-    border-radius: 1vh;
-    box-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
-}
+    input[type="text"] {
+        width: 100%;
+        padding: 1vw;
+        font-size: 1vw;
+        border-radius: 0.3vw;
+        margin-top: 1vh;
+    }
 
-#searchResults {
-    margin-top: 3vh;
-}
+    h1 {
+        margin-bottom: 1vh;
+        color: #333;
+    }
 
-#searchResults h3 {
-    font-size: 4vh;
-    margin-bottom: 1vh;
-    margin-top: 4vh;
-
-}
-
-#searchResults p {
-    font-size: 2vh;
-}
-
-#searchResults a {
-    display: block;
-    margin-top: 2vh; /* Optional: Add some space between the links */
-}
-
-mark {
-    background-color: rgb(255, 166, 0);
-    font-weight: bold;
-}
-
-.image-container-width {
-    position: relative;
-    width: 100vw; /* Full viewport width */
-    height: calc(100vh ); /* Set height to full viewport height minus the height of the navigation bar (adjust 60px to your actual navbar height) */
-    overflow: hidden; /* Hide overflow to clip the image */
-}
-
-.image-container-width img {
-    width: 100%; /* Make the image span the full width of the container */
-    height: 100%; /* Make the image fill the container */
-    object-fit: cover; /* Ensures the image covers the container */
-    object-position: center; /* Shows the middle part of the image */
-}
+    p {
+        color: #555;
+    }
 
 
-/* The image covers the entire container */
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    .search-container {
+        max-width: 80vw;
+        margin: 3vw auto;
+        margin-top:12vh;
 
-/* The text is absolutely positioned in the center */
-.centered-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(216, 130, 2); /* Text color */
-    font-size: 10vh; /* Adjust text size */
-    font-weight: bold;
-    text-align: center;
-    font-family: "Abril Fatface", Poppins;
+        padding: 1.7vw;
+        background-color: white;
+        border-radius: 1vh;
+        box-shadow: 0 0 1vh rgba(0, 0, 0, 0.1);
+    }
+
+    #searchResults {
+        margin-top: 3vh;
+    }
+
+    #searchResults h3 {
+        font-size: 4vh;
+        margin-bottom: 1vh;
+        margin-top: 4vh;
+
+    }
+
+    #searchResults p {
+        font-size: 2vh;
+    }
+
+    #searchResults a {
+        display: block;
+        margin-top: 2vh; /* Optional: Add some space between the links */
+    }
+
+    mark {
+        background-color: rgb(255, 166, 0);
+        font-weight: bold;
+    }
+
+    .image-container-width {
+        position: relative;
+        width: 100vw; /* Full viewport width */
+        height: calc(100vh ); /* Set height to full viewport height minus the height of the navigation bar (adjust 60px to your actual navbar height) */
+        overflow: hidden; /* Hide overflow to clip the image */
+    }
+
+    .image-container-width img {
+        width: 100%; /* Make the image span the full width of the container */
+        height: 100%; /* Make the image fill the container */
+        object-fit: cover; /* Ensures the image covers the container */
+        object-position: center; /* Shows the middle part of the image */
+    }
+
+
+    /* The image covers the entire container */
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* The text is absolutely positioned in the center */
+    .centered-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(216, 130, 2); /* Text color */
+        font-size: 10vh; /* Adjust text size */
+        font-weight: bold;
+        text-align: center;
+        font-family: "Abril Fatface", Poppins;
+        
+        /* Add a larger, more prominent shadow */
+        text-shadow: 1vh 1vh 2vh rgba(14, 14, 14, 0.4), 
+                    -1vh -1vh 2vh rgba(14, 14, 14, 0.4),
+                    1vh -1vh 2vh rgba(14, 14, 14, 0.4),
+                    -1vh 1vh 2vh rgba(14, 14, 14, 0.4);
+        
+        padding: 2vh; /* Adds some padding around the text */
+        border-radius: 1vh; /* Optionally, add rounded corners */
+        
+    }
+
+
+
+    .container p {
+        margin-bottom: 3vh; /* Adjust this value for desired spacing */
+    }
+
+
+
+
+
+    /*BELOW are FONTS to use for each of the sections
+    */
+    .middle_header_font {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */   
+        font-family: "Spectral", Rubik;
+        font-size: 5vh;
+        margin-bottom: 2vh;
+        background-color: rgb(253, 230, 195); /* Set the background color to gray */
+        width: 100vw; /* Make the background span the full width of the viewport */
+        padding: 2vh; /* Adds padding around the text */
+        box-sizing: border-box; /* Ensures padding is included within the width */
+    }
+
+    .middle_text_font {
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */   
+        font-family: "Spectral", Rubik;
+        font-size: 4vh;
+        background-color: rgb(250, 240, 235); /* Set the background color to gray */
+        width: 100vw; /* Make the background span the full width of the viewport */
+        padding: 2vh; /* Adds padding around the text */
+        box-sizing: border-box; /* Ensures padding is included within the width */
+    }
+
+
+
+
+
+    .body_font {
+        font-family: "Spectral", Rubik;
+        background-color: rgb(250, 245, 235); /* Set the background color to gray */
+        width: 100vw; /* Make the background span the full width of the viewport */
+        padding-left: 7vw; 
+        box-sizing: border-box; /* Ensures padding is included within the width */
+        max-width: 100vw; /* Limits text width for readability */
+        font-size: 3.5vh;
+        line-height: 2.5; /* Adds vertical space between lines of text */
+    }
+    .body_font p{
+        max-width: 50vw; /* Limits text width for readability */
+        margin-bottom:3vh;
+
+
+    }
+
+    .body_font img{
+        max-width: 40vw;
+        margin-left:4vw;
+        justify-content: left; /* Center horizontally */
+        align-items: left; /* Center vertically */   
+        height: auto;
+    }
+
+
+
+    .body_font1 {
+        font-family: "Spectral", Rubik;
+        background-color: rgb(250, 245, 235); /* Set the background color */
+        width: 100vw; /* Ensure the background spans the full width */
+        padding-left: 7vw; 
+        box-sizing: border-box; /* Include padding in the width calculation */
+        max-width: 100vw; /* Ensure the container doesn't exceed the viewport width */
+        font-size: 3.5vh;
+        line-height: 2.5; /* Increase line spacing for readability */
+        display: flex; /* Use flex layout to better control child elements */
+        flex-wrap: wrap; /* Allow items to wrap onto the next line */
+        justify-content: flex-start; /* Align items to the start of the flex container */
+    }
+
+    .body_font1 p {
+        max-width: 50vw; /* Limit paragraph width to 50% of the viewport width */
+        width: auto; /* Auto width allows content to grow but respects max-width */
+        margin-bottom: 3vh; /* Space between paragraphs */
+    }
+
+    .body_font1 img {
+        max-width: 40vw; /* Limit image width to 50% of the viewport width */
+        margin-right:20vw;
+        height: auto; /* Maintain image aspect ratio */
+        margin-left: 4vw; /* Space from the left within its container */
+    }
+
+
+
+    .first_header_font {
+        font-family: "Spectral", Rubik;
+        background-color: rgb(253, 230, 195); /* Set the background color to gray */
+        width: 100vw; /* Make the background span the full width of the viewport */ 
+        box-sizing: border-box; /* Ensures padding is included within the width */
+        max-width: 100vw; /* Limits text width for readability */
+        font-size: 3.5vh;
+        line-height: 2.5; /* Adds vertical space between lines of text */
+        padding-left: 10vw;
+        padding-top: 2vh;
+        margin-top: 0.5vh;
+
+    }
+
+    .selected_header_font {
+        font-family: "Spectral", Rubik;
+        background-color: rgb(253, 230, 195); /* Set the background color to gray */
+        width: 100vw; /* Make the background span the full width of the viewport */ 
+        box-sizing: border-box; /* Ensures padding is included within the width */
+        max-width: 100vw; /* Limits text width for readability */
+        font-size: 3.5vh;
+        line-height: 2.5; /* Adds vertical space between lines of text */
+        padding-left: 10vw;
+        padding-top: 2vh;
+        margin-top: 0.5vh;
+
+    }
+
+
+    .selected_header_font1 {
+        font-family: "Spectral", Rubik;
+        background-color: rgb(253, 230, 195); /* Set the background color to gray */
+        width: 100vw; /* Make the background span the full width of the viewport */ 
+        box-sizing: border-box; /* Ensures padding is included within the width */
+        max-width: 100vw; /* Limits text width for readability */
+        font-size: 3.5vh;
+        line-height: 2.5; /* Adds vertical space between lines of text */
+        padding-left: 10vw;
+        padding-top: 2vh;
+        margin-top: 0.5vh;
+
+    }
+
+    .header_font {
+        font-family: "Spectral", Rubik;
+        background-color: rgb(253, 230, 195); /* Set the background color to gray */
+        box-sizing: border-box; /* Ensures padding is included within the width */
+        width: 100vw; /* Make the background span the full width of the viewport */
+        padding-left: 10vw; /* Adjusts the text's position inside the container */
+        padding-right: 3vw; /* Optional: Add some padding on the right for better spacing */
+        padding-top: 2vh; /* Optional: Add padding on top */
+        font-size: 3.5vh;
+        line-height: 2.5; /* Adds vertical space between lines of text */
+    }
+
+
+    .remind-link {
+        text-decoration: underline, bold;
+        color: rgb(252, 122, 0);
+    }
+
+    .remind-link:hover {
+        font-weight: bold;
+    }
+
+
+
+
+
+
+
+
+    .leadership {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible grid with minimum width of 300px */
+        gap: 2vw; /* Space between grid items */
+        padding: 2vw;
+        width: 55vw; /* Adjust the width of the container */
+        margin-left: 5vw; /* Offset from the left */
+    }
+
+    .leadership-profile {
+        text-align: left;
+        margin-bottom: 5vh; /* Add space between the first and second row */
+        position: relative;
+    }
+
+    .leadership-profile img {
+        width: 100%; /* Make the image fill the profile container */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 1.5vh; /* Optionally, make the images rounded */
+        box-shadow: 0 2vh 3vh rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    }
+
+    .text-container {
+        margin-top: 4vh; /* Space between the image and text */
+    }
+
+    .leadership p.name {
+        font-family: "Spectral", Rubik;
+        font-size: 3vh; /* Adjust font size for the name */
+        color: #333; /* Text color */
+        font-weight: bold; /* Make the name bold */
+        margin-top: 3vh; /* Space between the image and the name */
+    }
+
+    .leadership p.position {
+        font-family: "Spectral", Rubik;
+        font-size: 2vh; /* Slightly smaller font size for the position */
+        color: #666; /* Slightly lighter text color */
+        margin-top: 1.5vh; /* Space between the name and the position */
+        text-decoration: underline;
+    }
+
+    .leadership p.description {
+        font-family: "Spectral", Rubik;
+        font-size: 1.9vh; /* Smaller font size for the description */
+        color: #333; /* Text color */
+        margin-top: 1.5vh; /* Space between the position and the description */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .last_header_font {
+        font-family: "Spectral", Rubik;
+        background-color: rgb(253, 230, 195); /* Set the background color to gray */
+        box-sizing: border-box; /* Ensures padding is included within the width */
+        width: 100vw; /* Make the background span the full width of the viewport */
+        padding-left: 10vw; /* Adjusts the text's position inside the container */
+        padding-right: 4vw; /* Optional: Add some padding on the right for better spacing */
+        padding-top: 2vh; /* Optional: Add padding on top */
+        font-size: 3.5vh;
+        line-height: 2.5; /* Adds vertical space between lines of text */
+    }
+
+    .last_header_font p {
+        font-family: "Spectral", Rubik;
+        margin: 0; /* Removes default margins from the paragraph */
+        color: rgb(0, 0, 0); /* Set the text color for contrast */
+    }
+
+
+
+
+
+
+
+
+    /*Below are used for instrgram/remind tags*/
+    .clubs-container {
+        display: flex; /* Aligns all club elements horizontally */
+        justify-content: space-between; /* Adds space between each club */
+        align-items: center; /* Aligns items vertically in the center */
+        padding: 4vh; /* Adds padding around the container */
+    }
+
+    /* Each club box */
+    .club {
+        text-align: center; /* Centers the text and images within each club */
+        flex: 1; /* Ensures each club takes up an equal amount of space */
+        margin: 0 2vh; /* Adds space between the club elements */
+        margin-bottom: 10vh;
+    }
+
+    /* Style for the social media icons */
+    .social-icon {
+        width: 5.5vw; /* Adjust size as needed */
+        height: auto;
+        margin: 0 0.5vw; /* Adds space between the logos */
+        transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+        border-radius: 25%;
+
+    }
+
+    .social-icon:hover {
+        box-shadow: 0 1vw 2vh rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
+        border-radius: 25%;
+    }
+
+    /* Optional: Styling for club headings */
+    .club h3 {
+        margin-bottom: 2vh;
+        font-size: 3.5vh;
+        font-family: Arial, sans-serif;
+    }
+
+
+
+
+
+    .no_move{
+        position: absolute;
+        right: 0;
+        margin-left: auto; /* Centers the content when the viewport is smaller than 700px */
+        margin-top: 10vh; /* Centers the content when the viewport is smaller than 700px */
+        margin-right: 2vw; /* Adds margin from the right edge */
+        max-width: 35vw; /* Maximum width of the container */
+        width: 100%; /* Allow the container to shrink to the viewport size */
+        height: auto;
+        z-index: 1;
+        transition: top 0s linear; /* Smooth linear transition when becoming sticky */
+        justify-content: center;
+        align-items: center; 
+    }
+
+
+
+
+    .fixed-image {
+        position: absolute;
+        right: 0;
+        margin-top: 3vh; /* Vertically aligns the content */
+        margin-right: 3vw; /* Adds margin from the right edge */
+        max-width: 35vw; /* Maximum width of the container */
+        width: 100%; /* Allow the container to shrink to the viewport size */
+        height: auto;
+        z-index: 1;
+        transition: top 0s linear; /* Smooth linear transition when becoming sticky */
+
+        text-align: center; /* Ensures text within is centered */
+    }
+
+    .fixed-image img {
+        height: auto; /* Keeps the aspect ratio of the images */
+        transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+        left:-2vw;
+        max-width: 60vh; /* Adjusts each image's maximum width to fit within the row */
+
+        margin-left: -2vw; /* Centering horizontally within the container */
+    }
+
+
+
+    .fixed-image img:hover {
+        box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.8); /* Adjust accordingly for hover effects */
+    }
+    .fixed-image p{
+        display: flex;
+        font-family: "Sofia", sans-serif;
+        font-size: 3vh;
+        box-sizing: border-box; /* Ensures padding is included within the width */
+        font-weight: bold; /* Makes the link bold */
+        justify-content: center;
+        padding: 3vh; /* Adds space inside the box */
+        background-color: rgb(245, 186, 118);
+        border-radius: 3vh; /* Rounds the edges of the box */
+        box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        border: 0.4vh solid #ccc; /* Optional: Adds a border to the box */
+        max-width: 40vw; /* Optional: Limits the width of the paragraph box */
+        margin-bottom: 1.5vh;
+        color:black;
+    }
+
+    .fixed-image p.link:hover{
+        text-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+        font-size: 150%; /* Increases the font size to 120% of its original on hover */
+
+    }
+
+
+
+
+    .fixed-image img.click:hover{
+        transform: scale(1.01); /* Slightly enlarge the image on hover */
+        box-shadow: 0 1vh 0.4vh rgba(0, 0, 0, 0.3); /* Add a shadow to make it stand out */
+        justify-content: center;
+        align-items: center;
+    }
+        
+
+    .fixed-image img.click {
+        width: 75%; /* Ensure the image fits within the container */
+        height: auto; /* Keep the aspect ratio */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+        margin-left: 2vw;
+        border: 1.0vw solid #4093c7; /* Add a border with the desired color */
+        border-radius: 2vw; /* Rounds the edges of the box */
+        padding: 1vh; /* Add padding between the image and the border */
+        background-color: #264653; /* Fill color for the background around the image */
+        box-sizing: border-box;
+    }
+
+
+
+    .fixed-image-2 {
+        position: absolute;
+        right: -60vw;
+        margin-left: auto; /* Centers the content for smaller viewports */
+        margin-top: 4vh;
+        margin-right: 1vw; /* Right edge margin */
+        width: 100%; /* Allow the container to shrink to the viewport size */
+        height: auto;
+        z-index: 1;
+        transition: top 0s linear; /* Smooth linear transition when becoming sticky */
+    }
+
+
+
+    .fixed-image-2 img.flier {
+        max-width: 14.5vh; /* Adjusts each image's maximum width to fit within the row */
+        height: auto; /* Maintains aspect ratio */
+        transition: box-shadow 0.3s; /* Smooth transition for hover effects */
+    }
+    .fixed-image-2 img {
+        max-width: 60vh; /* Adjusts each image's maximum width to fit within the row */
+        height: auto; /* Maintains aspect ratio */
+        transition: box-shadow 0.3s; /* Smooth transition for hover effects */
+    }
+
+    .fixed-image-2 img:hover {
+        box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.8); /* Enhances shadow on hover */
+        
+    }
+
+
+
+
+    .fixed-image-2 p{
+        right:0;
+        display: flex;
+        font-family: "Sofia", sans-serif;
+        font-size: 3vh;
+        box-sizing: border-box; /* Ensures padding is included within the width */
+        font-weight: bold; /* Makes the link bold */
+        justify-content: center;
+        padding: 3vh; /* Adds space inside the box */
+        background-color: rgb(245, 186, 118);
+        border-radius: 2vh; /* Rounds the edges of the box */
+        box-shadow: 0 2vh 4vw rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        border: 0.4vh solid #ccc; /* Optional: Adds a border to the box */
+        max-width: 35vw; /* Optional: Limits the width of the paragraph box */
+        margin-bottom: 4vh;
+        margin-left: 2vw;
+
+        color:black;
+    }
+
+    .fixed-image-2 p.link:hover{
+        text-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+        font-size: 150%; /* Increases the font size to 120% of its original on hover */
+    }
+
+
+
+
+    .fixed-image-2 img.click:hover{
+        transform: scale(1.01); /* Slightly enlarge the image on hover */
+        box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Add a shadow to make it stand out */}
+
+    .fixed-image-2 img.click {
+        width: 75%; /* Ensure the image fits within the container */
+        height: auto; /* Keep the aspect ratio */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+        border-radius: 1vh; /* Rounds the edges of the box */
+        padding: 2vh; /* Add padding between the image and the border */
+        background-color: #264653; /* Fill color for the background around the image */
+        box-sizing: border-box;
+    }
+
+
+
+
+    .fixed-image-1 {
+        position: absolute;
+        right: -60vw;
+        margin-left: auto; /* Centers the content for smaller viewports */
+        margin-top: 4vh;
+        margin-right: 1vw; /* Right edge margin */
+        width: 100%; /* Allow the container to shrink to the viewport size */
+        height: auto;
+        z-index: 1;
+        transition: top 0s linear; /* Smooth linear transition when becoming sticky */
+    }
+
     
-    /* Add a larger, more prominent shadow */
-    text-shadow: 1vh 1vh 2vh rgba(14, 14, 14, 0.4), 
-                 -1vh -1vh 2vh rgba(14, 14, 14, 0.4),
-                 1vh -1vh 2vh rgba(14, 14, 14, 0.4),
-                 -1vh 1vh 2vh rgba(14, 14, 14, 0.4);
-    
-    padding: 2vh; /* Adds some padding around the text */
-    border-radius: 1vh; /* Optionally, add rounded corners */
-    
-}
-
-
-
-.container p {
-    margin-bottom: 3vh; /* Adjust this value for desired spacing */
-}
-
-
-
-
-
-/*BELOW are FONTS to use for each of the sections
-*/
-.middle_header_font {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */   
-    font-family: "Spectral", Rubik;
-    font-size: 5vh;
-    margin-bottom: 2vh;
-    background-color: rgb(253, 230, 195); /* Set the background color to gray */
-    width: 100vw; /* Make the background span the full width of the viewport */
-    padding: 2vh; /* Adds padding around the text */
-    box-sizing: border-box; /* Ensures padding is included within the width */
-}
-
-.middle_text_font {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */   
-    font-family: "Spectral", Rubik;
-    font-size: 4vh;
-    background-color: rgb(250, 240, 235); /* Set the background color to gray */
-    width: 100vw; /* Make the background span the full width of the viewport */
-    padding: 2vh; /* Adds padding around the text */
-    box-sizing: border-box; /* Ensures padding is included within the width */
-}
-
-
-
-
-
-.body_font {
-    font-family: "Spectral", Rubik;
-    background-color: rgb(250, 245, 235); /* Set the background color to gray */
-    width: 100vw; /* Make the background span the full width of the viewport */
-    padding-left: 7vw; 
-    box-sizing: border-box; /* Ensures padding is included within the width */
-    max-width: 100vw; /* Limits text width for readability */
-    font-size: 3.5vh;
-    line-height: 2.5; /* Adds vertical space between lines of text */
-}
-.body_font p{
-    max-width: 50vw; /* Limits text width for readability */
-    margin-bottom:3vh;
-
-
-}
-
-.body_font img{
-    max-width: 40vw;
-    margin-left:4vw;
-    justify-content: left; /* Center horizontally */
-    align-items: left; /* Center vertically */   
-    height: auto;
-}
-
-
-
-.body_font1 {
-    font-family: "Spectral", Rubik;
-    background-color: rgb(250, 245, 235); /* Set the background color */
-    width: 100vw; /* Ensure the background spans the full width */
-    padding-left: 7vw; 
-    box-sizing: border-box; /* Include padding in the width calculation */
-    max-width: 100vw; /* Ensure the container doesn't exceed the viewport width */
-    font-size: 3.5vh;
-    line-height: 2.5; /* Increase line spacing for readability */
-    display: flex; /* Use flex layout to better control child elements */
-    flex-wrap: wrap; /* Allow items to wrap onto the next line */
-    justify-content: flex-start; /* Align items to the start of the flex container */
-}
-
-.body_font1 p {
-    max-width: 50vw; /* Limit paragraph width to 50% of the viewport width */
-    width: auto; /* Auto width allows content to grow but respects max-width */
-    margin-bottom: 3vh; /* Space between paragraphs */
-}
-
-.body_font1 img {
-    max-width: 40vw; /* Limit image width to 50% of the viewport width */
-    margin-right:20vw;
-    height: auto; /* Maintain image aspect ratio */
-    margin-left: 4vw; /* Space from the left within its container */
-}
-
-
-
-.first_header_font {
-    font-family: "Spectral", Rubik;
-    background-color: rgb(253, 230, 195); /* Set the background color to gray */
-    width: 100vw; /* Make the background span the full width of the viewport */ 
-    box-sizing: border-box; /* Ensures padding is included within the width */
-    max-width: 100vw; /* Limits text width for readability */
-    font-size: 3.5vh;
-    line-height: 2.5; /* Adds vertical space between lines of text */
-    padding-left: 10vw;
-    padding-top: 2vh;
-    margin-top: 0.5vh;
-
-}
-
-.selected_header_font {
-    font-family: "Spectral", Rubik;
-    background-color: rgb(253, 230, 195); /* Set the background color to gray */
-    width: 100vw; /* Make the background span the full width of the viewport */ 
-    box-sizing: border-box; /* Ensures padding is included within the width */
-    max-width: 100vw; /* Limits text width for readability */
-    font-size: 3.5vh;
-    line-height: 2.5; /* Adds vertical space between lines of text */
-    padding-left: 10vw;
-    padding-top: 2vh;
-    margin-top: 0.5vh;
-
-}
 
 
-.selected_header_font1 {
-    font-family: "Spectral", Rubik;
-    background-color: rgb(253, 230, 195); /* Set the background color to gray */
-    width: 100vw; /* Make the background span the full width of the viewport */ 
-    box-sizing: border-box; /* Ensures padding is included within the width */
-    max-width: 100vw; /* Limits text width for readability */
-    font-size: 3.5vh;
-    line-height: 2.5; /* Adds vertical space between lines of text */
-    padding-left: 10vw;
-    padding-top: 2vh;
-    margin-top: 0.5vh;
 
-}
+    .fixed-image-1 img.flier {
+        max-width: 14.5vh; /* Adjusts each image's maximum width to fit within the row */
+        height: auto; /* Maintains aspect ratio */
+        transition: box-shadow 0.3s; /* Smooth transition for hover effects */
+    }
+    .fixed-image-1 img {
+        max-width: 60vh; /* Adjusts each image's maximum width to fit within the row */
+        height: auto; /* Maintains aspect ratio */
+        transition: box-shadow 0.3s; /* Smooth transition for hover effects */
+    }
+
+    .fixed-image-1 img:hover {
+        box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.8); /* Enhances shadow on hover */
+        
+    }
+
+
+
+
+    .fixed-image-1 p{
+        right:0;
+        display: flex;
+        font-family: "Sofia", sans-serif;
+        font-size: 3vh;
+        box-sizing: border-box; /* Ensures padding is included within the width */
+        font-weight: bold; /* Makes the link bold */
+        justify-content: center;
+        padding: 3vh; /* Adds space inside the box */
+        background-color: rgb(245, 186, 118);
+        border-radius: 2vh; /* Rounds the edges of the box */
+        box-shadow: 0 2vh 4vw rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        border: 0.4vh solid #ccc; /* Optional: Adds a border to the box */
+        max-width: 35vw; /* Optional: Limits the width of the paragraph box */
+        margin-bottom: 4vh;
+        margin-left: 2vw;
+
+        color:black;
+    }
+
+    .fixed-image-1 p.link:hover{
+        text-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+        font-size: 150%; /* Increases the font size to 120% of its original on hover */
+    }
+
+
+
+
+    .fixed-image-1 img.click:hover{
+        transform: scale(1.01); /* Slightly enlarge the image on hover */
+        box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Add a shadow to make it stand out */}
+
+    .fixed-image-1 img.click {
+        width: 75%; /* Ensure the image fits within the container */
+        height: auto; /* Keep the aspect ratio */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+        border-radius: 1vh; /* Rounds the edges of the box */
+        padding: 2vh; /* Add padding between the image and the border */
+        background-color: #4c70ad; /* Fill color for the background around the image */
+        box-sizing: border-box;
+    }
+
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Ensures alignment is consistent from the top */
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .fixed-image-blog, .fixed-image-blog1 {
+        position: absolute;
+        right: 0;
+        margin-left: auto;
+        margin-top: 7vh;
+        margin-right: 3vw;
+        max-width: 40vw;
+        width: 31%;
+        height: auto;
+        z-index: 1;
+        transition: top 0s linear;
+    }
+
+    .fixed-image-blog2 {
+        position: absolute;
+        right: 0;
+        margin-left: auto;
+        margin-right: 3vw;
+        max-width: 40vw;
+        width: 31%;
+        height: auto;
+        z-index: 1;
+        transition: top 0s linear;
+    }
+
+    .main-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Sofia", sans-serif;
+        font-size: 4vh;
+        font-weight: bold;
+        padding: 2vh;
+        background-color: rgb(245, 186, 118);
+        border-radius: 1vh;
+        box-shadow: 0 1vh 1vw rgba(0, 0, 0, 0.1);
+        border: 2px solid #ccc;
+        max-width: 25vw;
+        margin-left: 3.5vw;
+        color: black;
 
-.header_font {
-    font-family: "Spectral", Rubik;
-    background-color: rgb(253, 230, 195); /* Set the background color to gray */
-    box-sizing: border-box; /* Ensures padding is included within the width */
-    width: 100vw; /* Make the background span the full width of the viewport */
-    padding-left: 10vw; /* Adjusts the text's position inside the container */
-    padding-right: 3vw; /* Optional: Add some padding on the right for better spacing */
-    padding-top: 2vh; /* Optional: Add padding on top */
-    font-size: 3.5vh;
-    line-height: 2.5; /* Adds vertical space between lines of text */
-}
+    }
 
+    .static-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: "Sofia", sans-serif;
+        font-size: 4vh;
+        font-weight: bold;
+        text-decoration: underline;
+        padding: 20px;
+        background-color: rgb(245, 186, 118);
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: 2px solid #ccc;
+        max-width: 30vw;
+        margin-bottom: 20px;
+        margin-top: 2vh;
 
-.remind-link {
-    text-decoration: underline, bold;
-    color: rgb(252, 122, 0);
-}
+        color: black;
+    }
 
-.remind-link:hover {
-    font-weight: bold;
-}
+    .content-section {
+        border: 2px solid #ccc;
+        padding: 20px;
+        background-color: #fff;
+        margin-left: 1vw;
+        margin-top: 0.7vh;
 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
 
+    .fixed-image-blog h3, .fixed-image-blog1 h3, .fixed-image-blog2 h3 {
+        font-size: 2.5vh;
+        margin: 5px 0;
+        color: #333;
 
+    }
 
+    .fixed-image-blog p, .fixed-image-blog1 p, .fixed-image-blog2 p {
+        font-size: 2vh;
+        margin-bottom: 4vh;
 
+    }
 
 
+    .not-moving-scroll {
+        position: absolute;
+        right: 0;
+        margin-left: auto;
+        margin-top: -4vh;
+        margin-right: 1.5vw;
+        font-size: 2vh;
+        max-width: 40vw;
+        width: 31%;
+        height: auto;
+        z-index: 1;
+        transition: top 0s linear;
+    }
 
-.leadership {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible grid with minimum width of 300px */
-    gap: 2vw; /* Space between grid items */
-    padding: 2vw;
-    width: 55vw; /* Adjust the width of the container */
-    margin-left: 5vw; /* Offset from the left */
-}
 
-.leadership-profile {
-    text-align: left;
-    margin-bottom: 5vh; /* Add space between the first and second row */
-    position: relative;
-}
 
-.leadership-profile img {
-    width: 100%; /* Make the image fill the profile container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 1.5vh; /* Optionally, make the images rounded */
-    box-shadow: 0 2vh 3vh rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-}
 
-.text-container {
-    margin-top: 4vh; /* Space between the image and text */
-}
 
-.leadership p.name {
-    font-family: "Spectral", Rubik;
-    font-size: 3vh; /* Adjust font size for the name */
-    color: #333; /* Text color */
-    font-weight: bold; /* Make the name bold */
-    margin-top: 3vh; /* Space between the image and the name */
-}
 
-.leadership p.position {
-    font-family: "Spectral", Rubik;
-    font-size: 2vh; /* Slightly smaller font size for the position */
-    color: #666; /* Slightly lighter text color */
-    margin-top: 1.5vh; /* Space between the name and the position */
-    text-decoration: underline;
-}
+    hr {
+        border: none;       /* Removes the default border */
+        height: 2px;        /* Sets the thickness of the line */
+        background-color: #000000; /* Sets the color of the line */
+        margin: 20px auto;        /* Adds vertical spacing and centers horizontally */
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
+    }
 
-.leadership p.description {
-    font-family: "Spectral", Rubik;
-    font-size: 1.9vh; /* Smaller font size for the description */
-    color: #333; /* Text color */
-    margin-top: 1.5vh; /* Space between the position and the description */
-}
 
 
 
+    .black-link {
+        color: black;
+        text-decoration: underline;
+    }
 
+    .black-link:hover {
+        color: black;
+        text-decoration: underline; /* Optional */
+    }
 
 
 
@@ -434,23 +901,7 @@ mark {
 
 
 
-.last_header_font {
-    font-family: "Spectral", Rubik;
-    background-color: rgb(253, 230, 195); /* Set the background color to gray */
-    box-sizing: border-box; /* Ensures padding is included within the width */
-    width: 100vw; /* Make the background span the full width of the viewport */
-    padding-left: 10vw; /* Adjusts the text's position inside the container */
-    padding-right: 4vw; /* Optional: Add some padding on the right for better spacing */
-    padding-top: 2vh; /* Optional: Add padding on top */
-    font-size: 3.5vh;
-    line-height: 2.5; /* Adds vertical space between lines of text */
-}
 
-.last_header_font p {
-    font-family: "Spectral", Rubik;
-    margin: 0; /* Removes default margins from the paragraph */
-    color: rgb(0, 0, 0); /* Set the text color for contrast */
-}
 
 
 
@@ -459,785 +910,337 @@ mark {
 
 
 
-/*Below are used for instrgram/remind tags*/
-.clubs-container {
-    display: flex; /* Aligns all club elements horizontally */
-    justify-content: space-between; /* Adds space between each club */
-    align-items: center; /* Aligns items vertically in the center */
-    padding: 4vh; /* Adds padding around the container */
-}
 
-/* Each club box */
-.club {
-    text-align: center; /* Centers the text and images within each club */
-    flex: 1; /* Ensures each club takes up an equal amount of space */
-    margin: 0 2vh; /* Adds space between the club elements */
-    margin-bottom: 10vh;
-}
 
-/* Style for the social media icons */
-.social-icon {
-    width: 5.5vw; /* Adjust size as needed */
-    height: auto;
-    margin: 0 0.5vw; /* Adds space between the logos */
-    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
-    border-radius: 25%;
 
-}
 
-.social-icon:hover {
-    box-shadow: 0 1vw 2vh rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
-    border-radius: 25%;
-}
+    .section_bottom_about {
+        padding: 2vh;
+        max-width: 100vw;
+        background-color: rgb(233, 131, 14);
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: flex;
+        height : 10vh;
+        justify-content: right;
+        align-items: center;
+        font-family: "Fjalla On", Libre Baskerville;
+        font-size: 3vh;
+    }
 
-/* Optional: Styling for club headings */
-.club h3 {
-    margin-bottom: 2vh;
-    font-size: 3.5vh;
-    font-family: Arial, sans-serif;
-}
 
+    /* Bottom stip */
+    .section_bottom_about p {
+        margin-right: 2vw; /* Adjust to control vertical positioning */
+        color: black;
+    }
 
+    .section_bottom_about img.instagram-icon{
+        position: absolute; /* Positions the icon absolutely within the bar */
+        left: 1vw; /* Places the icon at the leftmost side of the bar */
+        border: 0.2vh solid black; /* Adds a 2px black border around the icon */
+        border-radius: 25%; /* Optionally, makes the border rounded */
+        width: 50px; /* Adjust size as needed */
+        height: auto;
+        transform: translateY(-50%); /* Centers the icon vertically */
+    }
 
+    .section_bottom_about img.instagram-icon:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
+        border-radius: 25%;
+    }
 
 
-.no_move{
-    position: absolute;
-    right: 0;
-    margin-left: auto; /* Centers the content when the viewport is smaller than 700px */
-    margin-top: 10vh; /* Centers the content when the viewport is smaller than 700px */
-    margin-right: 2vw; /* Adds margin from the right edge */
-    max-width: 35vw; /* Maximum width of the container */
-    width: 100%; /* Allow the container to shrink to the viewport size */
-    height: auto;
-    z-index: 1;
-    transition: top 0s linear; /* Smooth linear transition when becoming sticky */
-    justify-content: center;
-    align-items: center; 
-}
 
 
 
 
-.fixed-image {
-    position: absolute;
-    right: 0;
-    margin-top: 3vh; /* Vertically aligns the content */
-    margin-right: 3vw; /* Adds margin from the right edge */
-    max-width: 35vw; /* Maximum width of the container */
-    width: 100%; /* Allow the container to shrink to the viewport size */
-    height: auto;
-    z-index: 1;
-    transition: top 0s linear; /* Smooth linear transition when becoming sticky */
 
-    text-align: center; /* Ensures text within is centered */
-}
+    .section_bottom {
+        padding: 15px;
+        width: 100vw;
+        background-color: rgb(233, 131, 14);
+        bottom: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between; /* Space between items (left and right alignment) */
+        align-items: center; /* Centers content vertically */
+        font-family: "Fjalla On", Libre Baskerville;
+        font-size: 3vh;
+    }
 
-.fixed-image img {
-    height: auto; /* Keeps the aspect ratio of the images */
-    transition: box-shadow 0.3s; /* Smooth transition for hover effect */
-    left:-2vw;
-    max-width: 60vh; /* Adjusts each image's maximum width to fit within the row */
+    .section_bottom .left-content {
+        display: flex;
+        align-items: center; /* Centers the text and images vertically */
+    }
 
-    margin-left: -2vw; /* Centering horizontally within the container */
-}
+    .section_bottom p.contact {
+        margin-left: 50px;
+        color: black;
+        font-weight: bold;
+    }
 
+    .section_bottom .right-content {
+        display: flex;
+        align-items: center; /* Centers the text and images vertically */
+    }
 
+    .section_bottom p.email {
+        margin-right: 50px;
+        color: black;
+        font-weight: bold;
+    }
 
-.fixed-image img:hover {
-    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.8); /* Adjust accordingly for hover effects */
-}
-.fixed-image p{
-    display: flex;
-    font-family: "Sofia", sans-serif;
-    font-size: 3vh;
-    box-sizing: border-box; /* Ensures padding is included within the width */
-    font-weight: bold; /* Makes the link bold */
-    justify-content: center;
-    padding: 3vh; /* Adds space inside the box */
-    background-color: rgb(245, 186, 118);
-    border-radius: 3vh; /* Rounds the edges of the box */
-    box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    border: 0.4vh solid #ccc; /* Optional: Adds a border to the box */
-    max-width: 40vw; /* Optional: Limits the width of the paragraph box */
-    margin-bottom: 1.5vh;
-    color:black;
-}
+    .section_bottom img.social {
+        margin-left: 1vw; /* Adds space to the right of each image */
+        margin-top: 1vh; /* Adds space to the right of each image */
 
-.fixed-image p.link:hover{
-    text-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
-    font-size: 150%; /* Increases the font size to 120% of its original on hover */
+        border: 0.3vh solid black; /* Adds a 2px black border around the icon */
+        border-radius: 25%; /* Optionally, makes the border rounded */
+        width: 5vh; /* Adjust size as needed */
+        height: auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    }
 
-}
+    .section_bottom img.social:hover {
+        box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
+        border-radius: 25%;
+        transform: scale(1.05); /* Slightly enlarge the image on hover */
+    }
 
+    .section_bottom p {
+        margin-left: 50px; /* Adjust to control vertical positioning */
+        color: black;
+        font-weight: bold;
+    }
 
 
 
-.fixed-image img.click:hover{
-    transform: scale(1.01); /* Slightly enlarge the image on hover */
-    box-shadow: 0 1vh 0.4vh rgba(0, 0, 0, 0.3); /* Add a shadow to make it stand out */
-    justify-content: center;
-    align-items: center;
-}
-    
 
-.fixed-image img.click {
-    width: 75%; /* Ensure the image fits within the container */
-    height: auto; /* Keep the aspect ratio */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    margin-left: 2vw;
-    border: 1.0vw solid #4093c7; /* Add a border with the desired color */
-    border-radius: 2vw; /* Rounds the edges of the box */
-    padding: 1vh; /* Add padding between the image and the border */
-    background-color: #264653; /* Fill color for the background around the image */
-    box-sizing: border-box;
-}
 
+    /* Style for the emphasized hyperlink */
+    .emphasized-link {
+        color: rgb(0, 0, 0); /* Changes the hyperlink color to stand out */
+        font-weight: bold; /* Makes the link bold */
+        text-decoration: underline; /* Adds underline to the link */
+    }
 
+    .emphasized-link:hover {
+        color: lightyellow; /* Changes the link color on hover */
+    }
 
-.fixed-image-2 {
-    position: absolute;
-    right: -60vw;
-    margin-left: auto; /* Centers the content for smaller viewports */
-    margin-top: 4vh;
-    margin-right: 1vw; /* Right edge margin */
-    width: 100%; /* Allow the container to shrink to the viewport size */
-    height: auto;
-    z-index: 1;
-    transition: top 0s linear; /* Smooth linear transition when becoming sticky */
-}
 
 
 
-.fixed-image-2 img.flier {
-    max-width: 14.5vh; /* Adjusts each image's maximum width to fit within the row */
-    height: auto; /* Maintains aspect ratio */
-    transition: box-shadow 0.3s; /* Smooth transition for hover effects */
-}
-.fixed-image-2 img {
-    max-width: 60vh; /* Adjusts each image's maximum width to fit within the row */
-    height: auto; /* Maintains aspect ratio */
-    transition: box-shadow 0.3s; /* Smooth transition for hover effects */
-}
 
-.fixed-image-2 img:hover {
-    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.8); /* Enhances shadow on hover */
-    
-}
 
 
 
 
-.fixed-image-2 p{
-    right:0;
-    display: flex;
-    font-family: "Sofia", sans-serif;
-    font-size: 3vh;
-    box-sizing: border-box; /* Ensures padding is included within the width */
-    font-weight: bold; /* Makes the link bold */
-    justify-content: center;
-    padding: 3vh; /* Adds space inside the box */
-    background-color: rgb(245, 186, 118);
-    border-radius: 2vh; /* Rounds the edges of the box */
-    box-shadow: 0 2vh 4vw rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    border: 0.4vh solid #ccc; /* Optional: Adds a border to the box */
-    max-width: 35vw; /* Optional: Limits the width of the paragraph box */
-    margin-bottom: 4vh;
-    margin-left: 2vw;
 
-    color:black;
-}
 
-.fixed-image-2 p.link:hover{
-    text-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
-    font-size: 150%; /* Increases the font size to 120% of its original on hover */
-}
 
 
 
 
-.fixed-image-2 img.click:hover{
-    transform: scale(1.01); /* Slightly enlarge the image on hover */
-    box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Add a shadow to make it stand out */}
+    /* Modal Background */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+        
+        /* Flexbox for centering */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
 
-.fixed-image-2 img.click {
-    width: 75%; /* Ensure the image fits within the container */
-    height: auto; /* Keep the aspect ratio */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    border-radius: 1vh; /* Rounds the edges of the box */
-    padding: 2vh; /* Add padding between the image and the border */
-    background-color: #264653; /* Fill color for the background around the image */
-    box-sizing: border-box;
-}
-
-
+        /* Smooth transition */
+        opacity: 0;
+        transition: opacity 0.5s ease; /* Smooth transition for fading in and out */
+    }
 
-
-.fixed-image-1 {
-    position: absolute;
-    right: -60vw;
-    margin-left: auto; /* Centers the content for smaller viewports */
-    margin-top: 4vh;
-    margin-right: 1vw; /* Right edge margin */
-    width: 100%; /* Allow the container to shrink to the viewport size */
-    height: auto;
-    z-index: 1;
-    transition: top 0s linear; /* Smooth linear transition when becoming sticky */
-}
-
-
-
-.fixed-image-1 img.flier {
-    max-width: 14.5vh; /* Adjusts each image's maximum width to fit within the row */
-    height: auto; /* Maintains aspect ratio */
-    transition: box-shadow 0.3s; /* Smooth transition for hover effects */
-}
-.fixed-image-1 img {
-    max-width: 60vh; /* Adjusts each image's maximum width to fit within the row */
-    height: auto; /* Maintains aspect ratio */
-    transition: box-shadow 0.3s; /* Smooth transition for hover effects */
-}
-
-.fixed-image-1 img:hover {
-    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.8); /* Enhances shadow on hover */
-    
-}
-
-
-
-
-.fixed-image-1 p{
-    right:0;
-    display: flex;
-    font-family: "Sofia", sans-serif;
-    font-size: 3vh;
-    box-sizing: border-box; /* Ensures padding is included within the width */
-    font-weight: bold; /* Makes the link bold */
-    justify-content: center;
-    padding: 3vh; /* Adds space inside the box */
-    background-color: rgb(245, 186, 118);
-    border-radius: 2vh; /* Rounds the edges of the box */
-    box-shadow: 0 2vh 4vw rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-    border: 0.4vh solid #ccc; /* Optional: Adds a border to the box */
-    max-width: 35vw; /* Optional: Limits the width of the paragraph box */
-    margin-bottom: 4vh;
-    margin-left: 2vw;
-
-    color:black;
-}
-
-.fixed-image-1 p.link:hover{
-    text-shadow: 1vh 1vh 3vh rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
-    font-size: 150%; /* Increases the font size to 120% of its original on hover */
-}
-
-
-
-
-.fixed-image-1 img.click:hover{
-    transform: scale(1.01); /* Slightly enlarge the image on hover */
-    box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Add a shadow to make it stand out */}
-
-.fixed-image-1 img.click {
-    width: 75%; /* Ensure the image fits within the container */
-    height: auto; /* Keep the aspect ratio */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    border-radius: 1vh; /* Rounds the edges of the box */
-    padding: 2vh; /* Add padding between the image and the border */
-    background-color: #4c70ad; /* Fill color for the background around the image */
-    box-sizing: border-box;
-}
-
-
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Ensures alignment is consistent from the top */
-    width: 80%;
-    margin: 0 auto;
-}
-
-.fixed-image-blog, .fixed-image-blog1 {
-    position: absolute;
-    right: 0;
-    margin-left: auto;
-    margin-top: 7vh;
-    margin-right: 3vw;
-    max-width: 40vw;
-    width: 31%;
-    height: auto;
-    z-index: 1;
-    transition: top 0s linear;
-}
-
-.fixed-image-blog2 {
-    position: absolute;
-    right: 0;
-    margin-left: auto;
-    margin-right: 3vw;
-    max-width: 40vw;
-    width: 31%;
-    height: auto;
-    z-index: 1;
-    transition: top 0s linear;
-}
-
-.main-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Sofia", sans-serif;
-    font-size: 4vh;
-    font-weight: bold;
-    padding: 2vh;
-    background-color: rgb(245, 186, 118);
-    border-radius: 1vh;
-    box-shadow: 0 1vh 1vw rgba(0, 0, 0, 0.1);
-    border: 2px solid #ccc;
-    max-width: 25vw;
-    margin-left: 3.5vw;
-    color: black;
+    .modal.show {
+        display: flex; /* Show modal when class "show" is added */
+        opacity: 1; /* Fade-in effect */
+    }
 
-}
+    /* Modal Content (Enlarged Image) */
+    .modal-content {
+        max-width: 80%; /* Limit the image size */
+        max-height: 80%; /* Limit the image size */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+        border-radius: 10px;
+    }
 
-.static-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-family: "Sofia", sans-serif;
-    font-size: 4vh;
-    font-weight: bold;
-    text-decoration: underline;
-    padding: 20px;
-    background-color: rgb(245, 186, 118);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #ccc;
-    max-width: 30vw;
-    margin-bottom: 20px;
-    margin-top: 2vh;
+    /* Close Button */
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+    }
 
-    color: black;
-}
 
-.content-section {
-    border: 2px solid #ccc;
-    padding: 20px;
-    background-color: #fff;
-    margin-left: 1vw;
-    margin-top: 0.7vh;
 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
 
-.fixed-image-blog h3, .fixed-image-blog1 h3, .fixed-image-blog2 h3 {
-    font-size: 2.5vh;
-    margin: 5px 0;
-    color: #333;
 
-}
 
-.fixed-image-blog p, .fixed-image-blog1 p, .fixed-image-blog2 p {
-    font-size: 2vh;
-    margin-bottom: 4vh;
 
-}
+    /* RESOURCES and COMMUNITY OUTREACH Tab */
 
+    /* Three Columns */
+    /* Three Columns */
+    .three-columns-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three equal columns across the container */
+        gap: 20px; /* Space between the main columns */
+        width: 100%; /* Full width of the parent */
+        padding: 20px; /* Padding around the entire container */
+    }
 
-.not-moving-scroll {
-    position: absolute;
-    right: 0;
-    margin-left: auto;
-    margin-top: -4vh;
-    margin-right: 1.5vw;
-    font-size: 2vh;
-    max-width: 40vw;
-    width: 31%;
-    height: auto;
-    z-index: 1;
-    transition: top 0s linear;
-}
+    .category {
+        background-color: #fff4d7; /* Background color for each category */
+        padding: 20px; /* Padding inside each category box */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for styling */
+        border-radius: 8px; /* Rounded corners for styling */
+        
+    }
 
+    .category h2 {
+        text-align: center; /* Center-align the headers */
+        margin-bottom: 15px; /* Space below the header */
+    }
 
+    .two-columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two equal columns inside each category */
+        gap: 10px; /* Space between the two sub-columns */
+        margin-bottom: 20px; /* Space below the column set */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */    
+    }
 
+    .sub-column {
+        background-color: #fffdfb; /* Light cream background color */
+        padding: 15px; /* Padding inside each sub-column */
+        text-align: center; /* Center text alignment */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+        border-radius: 8px; /* Rounded corners */    
+    }
 
 
 
-hr {
-    border: none;       /* Removes the default border */
-    height: 2px;        /* Sets the thickness of the line */
-    background-color: #000000; /* Sets the color of the line */
-    margin: 20px auto;        /* Adds vertical spacing and centers horizontally */
-    width: 80vw;
-    justify-content: center;
-    align-items: center;
-}
 
 
+    .article {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
 
+    .article1 {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
 
-.black-link {
-    color: black;
-    text-decoration: underline;
-}
 
-.black-link:hover {
-    color: black;
-    text-decoration: underline; /* Optional */
-}
+    .article1end {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
 
 
+    .article2 {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
 
 
+    .article2end {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
 
 
+    .article:last-child {
+        margin-bottom: 0; /* No bottom margin for the last article */
+    }
 
 
 
 
+    .blog-posts {
+        width: 65%; /* Adjust this value based on your layout needs */
+        margin: 0 auto; /* Centers the blog posts container in the middle of the page */
+        padding: 20px; /* Space around the contents inside the container */
+        background-color: #f8f8f8; /* Light grey background for a slight highlight */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+        border-radius: 8px; /* Optional: rounded corners for a smoother look */
+        margin-left: 20px;
 
+    }
 
 
 
 
 
+    .background-image {
+        background-image: url('C:/Website_Building/jacksongong.github.io/images_resources/background');
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* Full height */
+        display: flex;
+        align-items: center; /* Centers content vertically */
+        justify-content: center; /* Centers content horizontally */
+    }
 
+    .content {
+        width: 50vw; /* Adjust width as necessary */
+        padding: 20px;
+        text-align: center; /* Centers the text inside the box */
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+        border-radius: 10px;
+        transform: translateY(-25%); /* Move the box up by 25% relative to its center position */
+    }
 
+    .text {
+        width: 40vw; /* Limit the width of the text */
+        margin: 0 auto; /* Center the text block horizontally */
+    }
 
-
-
-
-
-
-.section_bottom_about {
-    padding: 2vh;
-    max-width: 100vw;
-    background-color: rgb(233, 131, 14);
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    font-family: "Fjalla On", Libre Baskerville;
-    font-size: 3vh;
-}
-
-
-/* Bottom stip */
-.section_bottom_about p {
-    margin-right: 2vw; /* Adjust to control vertical positioning */
-    color: black;
-}
-
-.section_bottom_about img.instagram-icon{
-    position: absolute; /* Positions the icon absolutely within the bar */
-    left: 1vw; /* Places the icon at the leftmost side of the bar */
-    border: 0.2vh solid black; /* Adds a 2px black border around the icon */
-    border-radius: 25%; /* Optionally, makes the border rounded */
-    width: 50px; /* Adjust size as needed */
-    height: auto;
-    transform: translateY(-50%); /* Centers the icon vertically */
-}
-
-.section_bottom_about img.instagram-icon:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
-    border-radius: 25%;
-}
-
-
-
-
-
-
-
-.section_bottom {
-    padding: 15px;
-    width: 100vw;
-    background-color: rgb(233, 131, 14);
-    bottom: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between; /* Space between items (left and right alignment) */
-    align-items: center; /* Centers content vertically */
-    font-family: "Fjalla On", Libre Baskerville;
-    font-size: 3vh;
-}
-
-.section_bottom .left-content {
-    display: flex;
-    align-items: center; /* Centers the text and images vertically */
-}
-
-.section_bottom p.contact {
-    margin-left: 50px;
-    color: black;
-    font-weight: bold;
-}
-
-.section_bottom .right-content {
-    display: flex;
-    align-items: center; /* Centers the text and images vertically */
-}
-
-.section_bottom p.email {
-    margin-right: 50px;
-    color: black;
-    font-weight: bold;
-}
-
-.section_bottom img.social {
-    margin-left: 1vw; /* Adds space to the right of each image */
-    margin-top: 1vh; /* Adds space to the right of each image */
-
-    border: 0.3vh solid black; /* Adds a 2px black border around the icon */
-    border-radius: 25%; /* Optionally, makes the border rounded */
-    width: 5vh; /* Adjust size as needed */
-    height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-}
-
-.section_bottom img.social:hover {
-    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.4); /* Adds a shadow on hover */
-    border-radius: 25%;
-    transform: scale(1.05); /* Slightly enlarge the image on hover */
-}
-
-.section_bottom p {
-    margin-left: 50px; /* Adjust to control vertical positioning */
-    color: black;
-    font-weight: bold;
-}
-
-
-
-
-
-/* Style for the emphasized hyperlink */
-.emphasized-link {
-    color: rgb(0, 0, 0); /* Changes the hyperlink color to stand out */
-    font-weight: bold; /* Makes the link bold */
-    text-decoration: underline; /* Adds underline to the link */
-}
-
-.emphasized-link:hover {
-    color: lightyellow; /* Changes the link color on hover */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Modal Background */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
-    
-    /* Flexbox for centering */
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-
-    /* Smooth transition */
-    opacity: 0;
-    transition: opacity 0.5s ease; /* Smooth transition for fading in and out */
-}
-
-.modal.show {
-    display: flex; /* Show modal when class "show" is added */
-    opacity: 1; /* Fade-in effect */
-}
-
-/* Modal Content (Enlarged Image) */
-.modal-content {
-    max-width: 80%; /* Limit the image size */
-    max-height: 80%; /* Limit the image size */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
-    border-radius: 10px;
-}
-
-/* Close Button */
-.close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-/* RESOURCES and COMMUNITY OUTREACH Tab */
-
-/* Three Columns */
-/* Three Columns */
-.three-columns-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns across the container */
-    gap: 20px; /* Space between the main columns */
-    width: 100%; /* Full width of the parent */
-    padding: 20px; /* Padding around the entire container */
-}
-
-.category {
-    background-color: #fff4d7; /* Background color for each category */
-    padding: 20px; /* Padding inside each category box */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for styling */
-    border-radius: 8px; /* Rounded corners for styling */
-    
-}
-
-.category h2 {
-    text-align: center; /* Center-align the headers */
-    margin-bottom: 15px; /* Space below the header */
-}
-
-.two-columns {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns inside each category */
-    gap: 10px; /* Space between the two sub-columns */
-    margin-bottom: 20px; /* Space below the column set */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */    
-}
-
-.sub-column {
-    background-color: #fffdfb; /* Light cream background color */
-    padding: 15px; /* Padding inside each sub-column */
-    text-align: center; /* Center text alignment */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-    border-radius: 8px; /* Rounded corners */    
-}
-
-
-
-
-
-.article {
-    background-color: #ffffff; /* White background for contrast */
-    border: 1px solid #ccc; /* Light grey border for subtle contrast */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    padding: 20px; /* Padding inside each article */
-    margin-bottom: 20px; /* Space between articles */
-    border-radius: 8px; /* Rounded corners for a smoother look */
-}
-
-.article1 {
-    background-color: #ffffff; /* White background for contrast */
-    border: 1px solid #ccc; /* Light grey border for subtle contrast */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    padding: 20px; /* Padding inside each article */
-    margin-bottom: 20px; /* Space between articles */
-    border-radius: 8px; /* Rounded corners for a smoother look */
-}
-
-
-.article1end {
-    background-color: #ffffff; /* White background for contrast */
-    border: 1px solid #ccc; /* Light grey border for subtle contrast */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    padding: 20px; /* Padding inside each article */
-    margin-bottom: 20px; /* Space between articles */
-    border-radius: 8px; /* Rounded corners for a smoother look */
-}
-
-
-.article2 {
-    background-color: #ffffff; /* White background for contrast */
-    border: 1px solid #ccc; /* Light grey border for subtle contrast */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    padding: 20px; /* Padding inside each article */
-    margin-bottom: 20px; /* Space between articles */
-    border-radius: 8px; /* Rounded corners for a smoother look */
-}
-
-
-.article2end {
-    background-color: #ffffff; /* White background for contrast */
-    border: 1px solid #ccc; /* Light grey border for subtle contrast */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    padding: 20px; /* Padding inside each article */
-    margin-bottom: 20px; /* Space between articles */
-    border-radius: 8px; /* Rounded corners for a smoother look */
-}
-
-
-.article:last-child {
-    margin-bottom: 0; /* No bottom margin for the last article */
-}
-
-
-
-
-.blog-posts {
-    width: 65%; /* Adjust this value based on your layout needs */
-    margin: 0 auto; /* Centers the blog posts container in the middle of the page */
-    padding: 20px; /* Space around the contents inside the container */
-    background-color: #f8f8f8; /* Light grey background for a slight highlight */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
-    border-radius: 8px; /* Optional: rounded corners for a smoother look */
-    margin-left: 20px;
-
-}
-
-
-
-
-
-.background-image {
-    background-image: url('C:/Website_Building/jacksongong.github.io/images_resources/background');
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Full height */
-    display: flex;
-    align-items: center; /* Centers content vertically */
-    justify-content: center; /* Centers content horizontally */
-}
-
-.content {
-    width: 50vw; /* Adjust width as necessary */
-    padding: 20px;
-    text-align: center; /* Centers the text inside the box */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    border-radius: 10px;
-    transform: translateY(-25%); /* Move the box up by 25% relative to its center position */
-}
-
-.text {
-    width: 40vw; /* Limit the width of the text */
-    margin: 0 auto; /* Center the text block horizontally */
-}
-
-.line {
-    border: none;
-    height: 2px;
-    background-color: black; /* Line color */
-    width: 80%; /* Relative to the parent container */
-    margin: 20px auto; /* Centers the line horizontally and adds spacing */
-}
+    .line {
+        border: none;
+        height: 2px;
+        background-color: black; /* Line color */
+        width: 80%; /* Relative to the parent container */
+        margin: 20px auto; /* Centers the line horizontally and adds spacing */
+    }
 
