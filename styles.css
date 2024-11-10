@@ -797,7 +797,7 @@
         border-radius: 1vh;
         box-shadow: 0 1vh 1vw rgba(0, 0, 0, 0.1);
         border: 2px solid #ccc;
-        max-width: 25vw;
+        max-width: 20vw;
         margin-left: 3.5vw;
         color: black;
 
@@ -1244,3 +1244,30 @@
         margin: 20px auto; /* Centers the line horizontally and adds spacing */
     }
 
+
+    /* The text is absolutely positioned in the center */
+    .centered-text-rectangle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(216, 130, 2); /* Text color */
+        font-size: 10vh; /* Adjust text size */
+        font-weight: bold;
+        text-align: center;
+        font-family: "Abril Fatface", Poppins;
+        
+        /* Add a larger, more prominent shadow */
+        text-shadow: 0.5vh 0.51vh 1vh rgba(14, 14, 14, 0.1), /* Reduced opacity for more subtle effect */
+                    -0.5vh -0.5vh 1vh rgba(14, 14, 14, 0.1);
+        
+        padding: 0vh; /* Reduced padding for a tighter fit */
+        padding-left: -1vh; 
+        padding-right: -1vh; 
+        border-radius: 1vh; /* Optionally, add rounded corners */
+        background-color: rgba(250, 234, 221, 0.75); /* Semi-transparent white background */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Reduced shadow size for a less prominent effect */
+    }
+    
+
+   
