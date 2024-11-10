@@ -17,7 +17,7 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="math-club.html">Math Club</a></li>
                 <li><a href="chemistry.html">Chemistry Club</a></li>
-                <li><a href="usaco.html">Coding </a></li>
+                <li><a href="usaco.html">Coding Club</a></li>
                 <li><a href="research-club.html">AI/ML Club</a></li>
                 <li><a href="physics.html">Physics Club</a></li>
                 <li><a href="biology.html">Biology Club</a></li>
@@ -37,14 +37,21 @@
 
     <!-- Fixed Image on the Right -->
 
-    <div class="fixed-image" >
-        <p class="link">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfe8B0G5-5SW93Tuj-kICHICtK5D3dG5g4c50G_U1daPjrGnw/viewform?usp=sf_link" class="black-link" target="_blank">Sign Up For NHS Free Math Tutoring!</a>
-       
+    <div class="fixed-image-1">
+        <p style="background-color: rgb(247, 183, 99); text-decoration: underline;">
+            Join the Club!
+            
         </p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfe8B0G5-5SW93Tuj-kICHICtK5D3dG5g4c50G_U1daPjrGnw/viewform" target="_blank"><img src="images_math/tutee-form.png" alt="Sticky Image" width="60%" height="auto" class="click" style="margin-left: 0.2vw; border: 0.4vw solid #e8ae27;"></a>
-        
+
+        <a href="https://www.remind.com/classes/nvmath21/people" target="_blank">
+            <img src="images_general/remind.png" alt="Remind" style = "border: 0.5vw solid #f5cdaf; max-width: 30.1vw; margin-left: 2.8vw; margin-top: -5vh">
+        </a>
+        <a href="https://drive.google.com/drive/folders/1yif3IwySnThMWtf0Tz6uCMCOxyCnH3rD" target="_blank">
+            <img src="images_general/drive.png" alt="Google Drive" style = "border: 0.5vw solid #f5cdaf; max-width: 18.1vw; margin-left: 0.2vw">
+        </a>
     </div>
+
+
     
         
     <!-- Text Starts HERE -->
@@ -62,7 +69,7 @@
 
             
         </p>
-        <img src="images_math/card-game-2.jpg", style="margin-left:11vw; margin-top:-3vh; max-width: 30%; height:auto">
+        <img src="images_math/card-game-2.jpg", style="margin-left:11vw; margin-top:3vh; max-width: 30%; height:auto">
 
     </div>
 
@@ -85,7 +92,17 @@
     </div>
 
 
-    <div class = "header_font">
+    <div class="fixed-image" >
+        <p class="link">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfe8B0G5-5SW93Tuj-kICHICtK5D3dG5g4c50G_U1daPjrGnw/viewform?usp=sf_link" class="black-link" target="_blank">Sign Up For NHS Free Math Tutoring!</a>
+       
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfe8B0G5-5SW93Tuj-kICHICtK5D3dG5g4c50G_U1daPjrGnw/viewform" target="_blank"><img src="images_math/tutee-form.png" alt="Sticky Image" width="60%" height="auto" class="click" style="margin-left: 0.2vw; border: 0.4vw solid #e8ae27;"></a>
+        
+    </div>
+    
+
+    <div class = "selected_header_font" style = "margin-top: 30vh">
         <h2>NHS Math Tutoring Program</h2>
     </div>
 
@@ -98,11 +115,18 @@
 
         </p>
         <img src="images_math/Math_Tutoring.jpg" alt="Leader 2", style="margin-left:9vw; margin-top:5vh; max-width: 30%; height:auto">
+        
+        
+        
+        <a href="https://www.remind.com/classes/tutornhs24/people" target="_blank">
+            <img src="images_general/remind.png" alt="Leader 2", class="social-icon" style="border: 0.5vw solid #ffedc2; margin-left:59vw; margin-top:-5vh; width: 25vw;">
+        </a>
+        
 
     </div>
 
     
-    <div class = "header_font">
+    <div class = "last_header_font">
         <h2 style="font-size: 5vh;">Midde School MATHCOUNTS Tutoring</h2>
     </div>
 
@@ -144,7 +168,7 @@
 
 
 
-    <div class = "last_header_font">
+    <div class = "header_font">
         <h2>Leadership Positions 24'-25'</h2>
     </div>
     <div class="leadership">
@@ -284,12 +308,22 @@
 
 
     <script src="script.js"></script>
+
     <script>
         window.addEventListener('scroll', function() {
-        scrollImage('.first_header_font', '.last_header_font');
+        scrollImage1('.first_header_font', '.selected_header_font', 850);
     });
     </script>
 
+
+    <script>
+        window.addEventListener('scroll', function() {
+        scrollImage('.selected_header_font', '.last_header_font', 1150);
+
+        
+    });
+    </script>
+    
 
 </body>
 </html>

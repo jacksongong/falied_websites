@@ -179,6 +179,12 @@
         object-fit: cover;
     }
 
+    .image-flex {
+        display: flex;
+        justify-content: space-around; /* Ensures even spacing */
+        align-items: center; /* Center items vertically */
+    }
+
     /* The text is absolutely positioned in the center */
     .centered-text {
         position: absolute;
@@ -784,6 +790,63 @@
         z-index: 1;
         transition: top 0s linear;
     }
+    .fixed-image-blog3 {
+        position: absolute;
+        right: 0;
+        margin-left: auto;
+        margin-right: 3vw;
+        max-width: 40vw;
+        width: 31%;
+        height: auto;
+        z-index: 1;
+        transition: top 0s linear;
+    }
+    .fixed-image-blog4 {
+        position: absolute;
+        right: 0;
+        margin-left: auto;
+        margin-right: 3vw;
+        max-width: 40vw;
+        width: 31%;
+        height: auto;
+        z-index: 1;
+        transition: top 0s linear;
+    }
+    .fixed-image-blog5 {
+        position: absolute;
+        right: 0;
+        margin-left: auto;
+        margin-right: 3vw;
+        max-width: 40vw;
+        width: 31%;
+        height: auto;
+        z-index: 1;
+        transition: top 0s linear;
+    }
+    .fixed-image-blog6 {
+        position: absolute;
+        right: 0;
+        margin-left: auto;
+        margin-right: 3vw;
+        max-width: 40vw;
+        width: 31%;
+        height: auto;
+        z-index: 1;
+        transition: top 0s linear;
+    }
+
+    .fixed-image-blog h3, .fixed-image-blog1 h3, .fixed-image-blog2 h3, .fixed-image-blog3 h3, .fixed-image-blog4 h3, .fixed-image-blog5 h3, .fixed-image-blog6 h3 {
+        font-size: 2.5vh;
+        margin: 5px 0;
+        color: #333;
+
+    }
+
+    .fixed-image-blog p, .fixed-image-blog1 p, .fixed-image-blog2 p, .fixed-image-blog3 p, .fixed-image-blog4 p, .fixed-image-blog5 p, .fixed-image-blog6 p {
+        font-size: 2vh;
+        margin-bottom: 4vh;
+
+    }
 
     .main-title {
         display: flex;
@@ -835,18 +898,7 @@
         border-radius: 8px;
     }
 
-    .fixed-image-blog h3, .fixed-image-blog1 h3, .fixed-image-blog2 h3 {
-        font-size: 2.5vh;
-        margin: 5px 0;
-        color: #333;
-
-    }
-
-    .fixed-image-blog p, .fixed-image-blog1 p, .fixed-image-blog2 p {
-        font-size: 2vh;
-        margin-bottom: 4vh;
-
-    }
+ 
 
 
     .not-moving-scroll {
@@ -1105,10 +1157,25 @@
         gap: 20px; /* Space between the main columns */
         width: 100%; /* Full width of the parent */
         padding: 20px; /* Padding around the entire container */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+    }
+
+    .three-columns-container a {
+        color: #1961ae; /* Blue color for links, change to whatever color you prefer */
+    }
+    
+
+    .three-columns-container a:hover {
+        color: #FF6347; /* Tomato color when hovered */
+    }
+    
+    .three-columns-container a:active {
+        color: #B22222; /* Firebrick color when active */
     }
 
     .category {
-        background-color: #fff4d7; /* Background color for each category */
+        background-color: #f8edd9; /* Background color for each category */
         padding: 20px; /* Padding inside each category box */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for styling */
         border-radius: 8px; /* Rounded corners for styling */
@@ -1135,6 +1202,10 @@
         text-align: center; /* Center text alignment */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
         border-radius: 8px; /* Rounded corners */    
+    }
+
+    .sub-column p{
+        font-family:sans-serif;
     }
 
 
@@ -1181,6 +1252,83 @@
 
 
     .article2end {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
+
+
+    .article3 {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
+
+
+    .article3end {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
+
+    .article4 {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
+
+
+    .article4end {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
+
+    .article5 {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
+
+
+    .article5end {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
+
+    .article6 {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
+
+
+    .article6end {
         background-color: #ffffff; /* White background for contrast */
         border: 1px solid #ccc; /* Light grey border for subtle contrast */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
