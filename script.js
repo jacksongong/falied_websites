@@ -244,6 +244,19 @@ function scroll_Image5(startSelector, endSelector, startOffset = 0, endOffset = 
     }
 }
 
+function updateScrollPositions() {
+    scroll_Image('.article1', '.article1end', -50, -400);
+    scroll_Image1('.article2', '.article2end', 500, -400);
+    scroll_Image2('.article3', '.article3end', -70, -400);
+    scroll_Image3('.article4', '.article4end', -70, -400);
+    scroll_Image4('.article5', '.article5end', -70, -400);
+    scroll_Image5('.article6', '.article6end', -70, -400);
+}
+
+// Event listeners for 'load' and 'scroll'
+window.addEventListener('load', updateScrollPositions);
+window.addEventListener('scroll', updateScrollPositions);
+
 
 function scrollImage(startSelector, endSelector, offset = 0) {
     var stickyImage = document.querySelector('.fixed-image');

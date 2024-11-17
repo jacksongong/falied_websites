@@ -592,7 +592,8 @@
         height: auto; /* Keep the aspect ratio */
         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
         margin-left: 2vw;
-        border: 1.0vw solid #4093c7; /* Add a border with the desired color */
+        /* border: 1.0vw solid #4093c7; */
+
         border-radius: 2vw; /* Rounds the edges of the box */
         padding: 1vh; /* Add padding between the image and the border */
         background-color: #264653; /* Fill color for the background around the image */
@@ -752,7 +753,7 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
         border-radius: 1vh; /* Rounds the edges of the box */
         padding: 2vh; /* Add padding between the image and the border */
-        background-color: #4c70ad; /* Fill color for the background around the image */
+        /* background-color: #4c70ad;  */
         box-sizing: border-box;
     }
 
