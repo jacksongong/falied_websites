@@ -58,7 +58,7 @@ window.onload = function() {
 function positionImagesBasedOnScroll() {
     positionImage('.fixed-image-blog1', '.not-moving-scroll', -70, 2800); // Adjust to start after the not-moving-scroll
     positionImage('.fixed-image-blog2', '.article2', -480, 1400); // Adjust start offset to 0 for blog2
-    positionImage('.fixed-image-blog3','.article3', -200, 800); // Adjust to start after the not-moving-scroll
+    positionImage('.fixed-image-blog3','.article3', -480, 800); // Adjust to start after the not-moving-scroll
     positionImage('.fixed-image-blog4','.article4', -480, 800); // Adjust start offset to 0 for blog2
     positionImage('.fixed-image-blog5', '.article5', -480, 800); // Adjust to start after the not-moving-scroll
     positionImage('.fixed-image-blog6', '.article6', -480, 800); // Adjust start offset to 0 for blog2
