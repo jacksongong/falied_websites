@@ -890,13 +890,17 @@
 
     .content-section {
         border: 2px solid #ccc;
-        padding: 20px;
+        padding: 4vh;
         background-color: #fff;
         margin-left: 1vw;
-        margin-top: 0.7vh;
-
+        margin-top: 1.2vh;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
+    }
+
+    .content-section p{
+        
+        margin-bottom: -0.1vh;
     }
 
  
@@ -1221,6 +1225,19 @@
         border-radius: 8px; /* Rounded corners for a smoother look */
     }
 
+    .article-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);  /* Two columns */
+        grid-gap: 5%;    
+    }
+    
+    .article-image {
+        width: 27vw;                /* Images fill their grid cell */
+        height: auto;
+        margin-top: 4vh;                       /* Gap between images */
+
+    }
+
     .article1 {
         background-color: #ffffff; /* White background for contrast */
         border: 1px solid #ccc; /* Light grey border for subtle contrast */
@@ -1249,7 +1266,23 @@
         margin-bottom: 20px; /* Space between articles */
         border-radius: 8px; /* Rounded corners for a smoother look */
     }
+    .article2 img:hover {
+        transform: scale(1.05);            /* Slightly enlarge the image */
+        box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    }
 
+    .articlebuffer {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
+    .articlebuffer img:hover {
+        transform: scale(1.05);            /* Slightly enlarge the image */
+        box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    }
 
     .article2end {
         background-color: #ffffff; /* White background for contrast */

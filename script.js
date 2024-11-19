@@ -56,11 +56,14 @@ window.onload = function() {
 };
 
 function positionImagesBasedOnScroll() {
-    positionImage('.fixed-image-blog1', '.not-moving-scroll', -70, 900); // Adjust to start after the not-moving-scroll
-    positionImage('.fixed-image-blog2', '.article2', -240, 900); // Adjust start offset to 0 for blog2
+    positionImage('.fixed-image-blog1', '.not-moving-scroll', -70, 2800); // Adjust to start after the not-moving-scroll
+    positionImage('.fixed-image-blog2', '.article2', -480, 1400); // Adjust start offset to 0 for blog2
+    positionImage('.fixed-image-blog3','.article3', -200, 800); // Adjust to start after the not-moving-scroll
+    positionImage('.fixed-image-blog4','.article4', -480, 800); // Adjust start offset to 0 for blog2
+    positionImage('.fixed-image-blog5', '.article5', -480, 800); // Adjust to start after the not-moving-scroll
+    positionImage('.fixed-image-blog6', '.article6', -480, 800); // Adjust start offset to 0 for blog2
     positionImage('.fixed-image-2', '.article2', 0, 700);    // Existing offsets for fixed-image-2
     positionImage('.fixed-image', '.article2', 0, 700);    // Existing offsets for fixed-image-2
-
 }
 
 function positionImage(imageSelector, referenceSelector, startOffset, endOffset) {
@@ -245,7 +248,7 @@ function scroll_Image5(startSelector, endSelector, startOffset = 0, endOffset = 
 }
 
 function updateScrollPositions() {
-    scroll_Image('.article1', '.article1end', -50, -400);
+    scroll_Image('.article1', '.article1end', 500, -800);
     scroll_Image1('.article2', '.article2end', 500, -400);
     scroll_Image2('.article3', '.article3end', -70, -400);
     scroll_Image3('.article4', '.article4end', -70, -400);
