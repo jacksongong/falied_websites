@@ -1284,6 +1284,20 @@
         box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Add shadow on hover */
     }
 
+
+    .article6final {
+        background-color: #ffffff; /* White background for contrast */
+        border: 1px solid #ccc; /* Light grey border for subtle contrast */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        padding: 20px; /* Padding inside each article */
+        margin-bottom: 20px; /* Space between articles */
+        border-radius: 8px; /* Rounded corners for a smoother look */
+    }
+    .article6final img:hover {
+        transform: scale(1.05);            /* Slightly enlarge the image */
+        box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    }
+
     .article2end {
         background-color: #ffffff; /* White background for contrast */
         border: 1px solid #ccc; /* Light grey border for subtle contrast */
